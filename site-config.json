@@ -1,0 +1,54 @@
+{
+  "status": "concept",
+  "authorizedByFirm": false,
+  "indexingAllowed": false,
+  "firm": {
+    "name": "Pramod Krishna & Co LLP",
+    "descriptor": "Chartered Accountants",
+    "address": {
+      "value": "Bridge Square, Balmatta, Mangaluru, Karnataka, India",
+      "status": "provided-for-review"
+    },
+    "phone": {
+      "value": "",
+      "status": "not-confirmed"
+    },
+    "email": {
+      "value": "",
+      "status": "not-confirmed"
+    },
+    "officeHours": {
+      "value": "",
+      "status": "not-confirmed"
+    },
+    "partners": {
+      "status": "names-and-roles-require-confirmation",
+      "profiles": []
+    }
+  },
+  "services": {
+    "status": "proposed-unconfirmed",
+    "items": [
+      "Taxation and tax advisory",
+      "GST and compliance",
+      "Audit and assurance",
+      "Accounting and bookkeeping",
+      "Financial reporting",
+      "Business and financial advisory"
+    ]
+  },
+  "insights": {
+    "status": "no-approved-articles",
+    "items": []
+  },
+  "contactForm": {
+    "enabled": false,
+    "submissionEndpoint": ""
+  },
+  "productionDomain": "",
+  "privacyPolicyApproved": false,
+  "professionalComplianceReview": {
+    "status": "required",
+    "reviewedAgainstCurrentRules": false
+  }
+}
