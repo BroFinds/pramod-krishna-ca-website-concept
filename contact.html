@@ -2,78 +2,285 @@
 <html lang="en-IN">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="robots" content="noindex, nofollow">
-    <meta name="theme-color" content="#f8f6f1">
-    <meta name="description" content="Contact information for this prospective Pramod Krishna &amp; Co LLP website concept is awaiting firm confirmation.">
+    <meta name="theme-color" content="#07140f">
+    <meta name="color-scheme" content="light">
+    <title>Contact | Pramod Krishna &amp; Co LLP, Balmatta, Mangaluru</title>
+    <meta name="description" content="Call 94801 51586 or visit III Floor, Bridge Square, Balmatta, Mangaluru. Pramod Krishna &amp; Co LLP is open Monday to Saturday, 9:30 am to 7:00 pm.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_IN">
-    <meta property="og:title" content="Contact | Pramod Krishna &amp; Co LLP">
-    <meta property="og:description" content="Contact details in this prospective website concept require firm confirmation.">
-    <title>Contact | Pramod Krishna &amp; Co LLP</title>
+    <meta property="og:site_name" content="Pramod Krishna &amp; Co LLP (website concept)">
+    <meta property="og:title" content="Contact | Pramod Krishna &amp; Co LLP, Balmatta, Mangaluru">
+    <meta property="og:description" content="Call 94801 51586 or visit III Floor, Bridge Square, Balmatta, Mangaluru. Pramod Krishna &amp; Co LLP is open Monday to Saturday, 9:30 am to 7:00 pm.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="fonts/bricolage-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
+    <script>
+      (function (d, w) {
+        var r = d.documentElement;
+        r.classList.add("js");
+        if (!(w.matchMedia && w.matchMedia("(prefers-reduced-motion: reduce)").matches)) r.classList.add("fx");
+        try {
+          if (localStorage.getItem("pkc-review-notes") === "on") r.dataset.notes = "on";
+          if (sessionStorage.getItem("pkc-curtain") === "1") r.classList.add("is-arriving");
+        } catch (e) {}
+        setTimeout(function () {
+          if (!w.__pkcReady) r.classList.remove("fx", "is-arriving");
+        }, 2500);
+      })(document, window);
+    </script>
+    <script src="vendor/gsap.min.js" defer></script>
+    <script src="vendor/ScrollTrigger.min.js" defer></script>
+    <script src="vendor/lenis.min.js" defer></script>
     <script src="site-effects.js" defer></script>
   </head>
   <body>
-    <div class="reading-progress" aria-hidden="true"><span></span></div>
     <a class="skip-link" href="#main">Skip to content</a>
-    <div class="concept-notice">Independent website concept · Not authorized or approved by the firm</div>
-    <header class="site-header">
-      <a class="wordmark" href="index.html" aria-label="Pramod Krishna and Company LLP, home"><span class="wordmark-name">Pramod Krishna <span>&amp; Co LLP</span></span><span class="wordmark-description">Chartered Accountants</span></a>
-      <nav class="desktop-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="insights.html">Insights</a><a href="contact.html" aria-current="page">Contact</a></nav>
-      <a class="header-contact" href="contact.html" aria-current="page">Contact the office <span aria-hidden="true">↗</span></a>
-      <details class="mobile-nav"><summary aria-label="Toggle navigation menu"><span></span><span></span></summary><nav class="mobile-menu-list" aria-label="Mobile navigation"><p class="mobile-menu-heading">Navigate</p><a href="index.html"><span class="menu-number">01</span><span>Home</span><span class="menu-arrow" aria-hidden="true">↗</span></a><a href="about.html"><span class="menu-number">02</span><span>About</span><span class="menu-arrow" aria-hidden="true">↗</span></a><a href="services.html"><span class="menu-number">03</span><span>Services</span><span class="menu-arrow" aria-hidden="true">↗</span></a><a href="insights.html"><span class="menu-number">04</span><span>Insights</span><span class="menu-arrow" aria-hidden="true">↗</span></a><a href="contact.html" aria-current="page"><span class="menu-number">05</span><span>Contact</span><span class="menu-arrow" aria-hidden="true">↗</span></a></nav></details>
+    <div class="curtain" aria-hidden="true"><span class="curtain-coin"></span><span class="curtain-mark">PK&amp;Co</span></div>
+    <div class="cursor is-hidden" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"><span class="cursor-label"></span></span></div>
+
+    <aside class="banner" aria-label="Website status">
+      <p><strong>Independent concept.</strong> <span class="banner-long">Not authorised or approved by the firm.</span><span class="banner-short">Not approved by the firm.</span></p>
+      <button class="notes-toggle" type="button" aria-pressed="false" data-notes-toggle hidden>
+        <span class="notes-toggle-track" aria-hidden="true"></span>
+        <span class="notes-toggle-label">Review notes</span>
+      </button>
+    </aside>
+
+    <header class="header" data-header>
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">PK</span>
+          <span class="brand-text"><span class="brand-name" translate="no">Pramod Krishna &amp; Co LLP</span><span class="brand-role">Chartered Accountants</span></span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          <a href="about.html"><span class="roll" data-text="About"><span>About</span></span></a>
+          <a href="services.html"><span class="roll" data-text="Services"><span>Services</span></span></a>
+          <a href="insights.html"><span class="roll" data-text="Insights"><span>Insights</span></span></a>
+          <a href="contact.html" aria-current="page"><span class="roll" data-text="Contact"><span>Contact</span></span></a>
+        </nav>
+        <div class="header-end">
+          <span class="status status-pill" data-status><span class="status-dot" aria-hidden="true"></span><span class="status-text">Mon–Sat, 9:30–7:00</span></span>
+          <a class="pill" href="tel:+919480151586" data-magnetic data-cursor="Call"><span class="roll" data-text="Call the office"><span>Call the office</span></span></a>
+        </div>
+        <details class="menu" data-menu>
+          <summary aria-label="Menu"><span class="menu-icon" aria-hidden="true"><span></span><span></span></span></summary>
+          <div class="menu-panel">
+            <nav aria-label="Main">
+              <a href="index.html"><span class="menu-index">01</span><span class="menu-word">Home</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="about.html"><span class="menu-index">02</span><span class="menu-word">About</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="services.html"><span class="menu-index">03</span><span class="menu-word">Services</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="insights.html"><span class="menu-index">04</span><span class="menu-word">Insights</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="contact.html" aria-current="page"><span class="menu-index">05</span><span class="menu-word">Contact</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </nav>
+            <div class="menu-foot">
+              <p class="status" data-status><span class="status-dot" aria-hidden="true"></span><span class="status-text">Mon–Sat, 9:30–7:00</span></p>
+              <a class="menu-call" href="tel:+919480151586"><svg class="icon-phone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>94801&nbsp;51586</span></a>
+              <p>III Floor, Bridge Square, Balmatta, Mangaluru</p>
+            </div>
+          </div>
+        </details>
+      </div>
     </header>
 
+    <div class="tikku" data-tikku>
+      <div class="tikku-bubble" data-tikku-bubble aria-live="polite"></div>
+      <div class="tikku-panel" id="tikku-panel" role="dialog" aria-label="Quick help from Tikku" data-tikku-panel hidden>
+        <div class="tp-head">
+          <p class="tp-hello" data-tikku-hello>Hi, I&rsquo;m Tikku.</p>
+          <button class="tp-close" type="button" aria-label="Close quick help" data-tikku-close><span aria-hidden="true"></span></button>
+        </div>
+        <p class="status tp-status" data-status><span class="status-dot" aria-hidden="true"></span><span class="status-text">Mon–Sat, 9:30 am to 7:00 pm</span></p>
+        <ul class="tp-actions">
+          <li><a href="tel:+919480151586" data-cursor="Call"><svg class="icon-phone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>Call 94801&nbsp;51586</span></a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Pramod+Krishna+%26+Co+LLP%2C+Bridge+Square%2C+Balmatta%2C+Mangaluru" target="_blank" rel="noopener" data-cursor="Map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span>Get directions</span></a></li>
+          <li>
+            <button type="button" aria-expanded="false" aria-controls="tp-hours" data-accordion><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Office hours</span><span class="acc-chev" aria-hidden="true"></span></button>
+            <div class="acc-body" id="tp-hours" hidden>
+              <table class="hours hours-mini" data-hours>
+                <caption class="visually-hidden">Office hours</caption>
+                <tbody>
+                  <tr data-day="1"><th scope="row">Monday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="2"><th scope="row">Tuesday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="3"><th scope="row">Wednesday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="4"><th scope="row">Thursday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="5"><th scope="row">Friday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="6"><th scope="row">Saturday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+          <li><a href="services.html#taxation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7M9 8h3"/></svg><span>What should I bring?</span></a></li>
+        </ul>
+        <button class="tp-hide" type="button" data-tikku-hide>Hide Tikku</button>
+      </div>
+      <button class="tikku-btn" type="button" aria-expanded="false" aria-controls="tikku-panel" aria-label="Tikku: quick help with hours, directions and calling the office" data-tikku-btn data-cursor="Hi!">
+        <span class="tikku-body" data-tikku-body>
+          <svg class="tk" viewBox="0 0 120 140" aria-hidden="true" focusable="false">
+            <defs>
+              <radialGradient id="tkBody" cx="36%" cy="30%" r="78%">
+                <stop offset="0" stop-color="#FFE7A8"/>
+                <stop offset=".5" stop-color="#F6BC45"/>
+                <stop offset="1" stop-color="#DB8E1C"/>
+              </radialGradient>
+            </defs>
+            <ellipse class="tk-shadow" cx="60" cy="133" rx="25" ry="4.5"/>
+            <g class="tk-all">
+              <g class="tk-feet"><ellipse cx="46" cy="124" rx="9.5" ry="5.5"/><ellipse cx="74" cy="124" rx="9.5" ry="5.5"/></g>
+              <g class="tk-arm tk-arm-l"><path d="M20 78c-9 3-13 10-13 18"/></g>
+              <g class="tk-arm tk-arm-r"><path d="M100 76c9-3 14-10 15-19"/></g>
+              <g class="tk-antenna"><path class="tk-stalk" d="M60 32V17"/><path class="tk-tick" d="M49 10l7 7 13-14"/></g>
+              <circle class="tk-body" cx="60" cy="76" r="44"/>
+              <circle class="tk-rim" cx="60" cy="76" r="36"/>
+              <g class="tk-face">
+                <g class="tk-eye tk-eye-l"><ellipse cx="45" cy="70" rx="9.5" ry="11"/><circle class="tk-pupil" cx="45" cy="71" r="4.6"/><circle class="tk-glint" cx="47" cy="68.5" r="1.5"/></g>
+                <g class="tk-eye tk-eye-r"><ellipse cx="75" cy="70" rx="9.5" ry="11"/><circle class="tk-pupil" cx="75" cy="71" r="4.6"/><circle class="tk-glint" cx="77" cy="68.5" r="1.5"/></g>
+                <ellipse class="tk-cheek" cx="34" cy="86" rx="5.5" ry="3.2"/>
+                <ellipse class="tk-cheek" cx="86" cy="86" rx="5.5" ry="3.2"/>
+                <path class="tk-mouth tk-smile" d="M51 88c5 7 13 7 18 0"/>
+                <ellipse class="tk-mouth tk-oh" cx="60" cy="91" rx="4.5" ry="5.5"/>
+                <path class="tk-mouth tk-sleep" d="M54 90h12"/>
+              </g>
+              <g class="tk-zzz"><text x="92" y="30">z</text><text x="100" y="18">z</text><text x="106" y="8">z</text></g>
+            </g>
+          </svg>
+        </span>
+      </button>
+      <button class="tikku-peek" type="button" aria-label="Show Tikku" data-tikku-show hidden><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></button>
+    </div>
+
     <main id="main">
-      <section class="page-hero page-width">
-        <p class="eyebrow"><span class="eyebrow-rule"></span> Contact / details to confirm</p>
-        <h1>Start with a<br><em>clear conversation.</em></h1>
-        <div class="page-hero-bottom"><p>Contact channels are not published here because no phone number, email address or enquiry service has been confirmed for this concept.</p><span class="page-hero-index">04 / CONTACT</span></div>
-      </section>
-      <section class="contact-details-section section-pad">
-        <div class="page-width contact-layout">
-          <div class="contact-left">
-            <p class="eyebrow"><span class="eyebrow-rule"></span> Office reference</p>
-            <h2>Bridge Square,<br>Balmatta</h2>
-            <p class="contact-place">Mangaluru, Karnataka, India</p>
-            <p class="provisional-block">Location supplied for this concept; confirm the complete office address before publication.</p>
-          </div>
-          <div class="contact-right">
-            <div class="contact-row"><span>Telephone</span><p>Not provided for confirmation</p></div>
-            <div class="contact-row"><span>Email</span><p>Not provided for confirmation</p></div>
-            <div class="contact-row"><span>Office hours</span><p>Not provided for confirmation</p></div>
-            <div class="contact-row"><span>Directions</span><p>Link to be added after address verification</p></div>
+      <section class="phero" data-phero aria-labelledby="page-title" data-tikku-say="Calling is quickest. Visiting is friendlier.">
+        <div class="aurora aurora-soft" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+        <div class="grid-glow" aria-hidden="true"></div>
+        <div class="wrap phero-inner">
+          <p class="eyebrow-pill" data-hero-fade><span class="pill-coin" aria-hidden="true">&#8377;</span>Contact</p>
+          <h1 id="page-title" class="phero-title" data-split><span class="ln"><span>Come by,</span></span><span class="ln"><span><em>or call ahead.</em></span></span></h1>
+          <div class="phero-foot">
+            <p class="phero-lede" data-hero-fade>The office is on the third floor of Bridge Square in Balmatta, near Juice Junction.</p>
+            <p class="status status-lg" data-status data-hero-fade><span class="status-dot" aria-hidden="true"></span><span class="status-text">Monday to Saturday, 9:30 am to 7:00 pm</span></p>
           </div>
         </div>
       </section>
-      <section class="contact-form-note section-pad">
-        <div class="page-width form-note-grid">
-          <p class="section-index">Enquiries</p>
-          <div><h2>No form is connected.</h2><p>This concept does not collect or send enquiries. A contact form should only be added with an approved destination, privacy notice and tested success and error handling. Do not send sensitive financial information through a general enquiry form.</p></div>
+
+      <section class="channels" aria-label="Ways to reach the office">
+        <div class="wrap channel-grid">
+          <a class="channel t-forest" href="tel:+919480151586" data-reveal data-tilt data-cursor="Call">
+            <span class="channel-kind"><svg class="icon-phone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</span>
+            <span class="channel-value">94801&nbsp;51586</span>
+            <span class="channel-hint">During office hours <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="channel t-saffron" href="mailto:capramod123@gmail.com" data-reveal data-tilt data-cursor="Write">
+            <span class="channel-kind"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</span>
+            <span class="channel-value channel-value-sm">capramod123@gmail.com</span>
+            <span class="channel-hint">No documents by email, please <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="channel t-mint" href="https://www.google.com/maps/search/?api=1&amp;query=Pramod+Krishna+%26+Co+LLP%2C+Bridge+Square%2C+Balmatta%2C+Mangaluru" target="_blank" rel="noopener" data-reveal data-tilt data-cursor="Map">
+            <span class="channel-kind"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Visit</span>
+            <span class="channel-value">Bridge Square, Balmatta</span>
+            <span class="channel-hint">Open in Google Maps <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          </a>
+        </div>
+        <div class="wrap"><p class="note" role="note"><b>To confirm</b><span>Phone, email and hours come from public directory listings. The email is a personal Gmail address; the firm may prefer to publish another.</span></p></div>
+      </section>
+
+      <section class="find" aria-labelledby="find-title">
+        <div class="wrap find-grid">
+          <div class="find-copy tile" data-reveal>
+            <div class="tile-head"><h2 id="find-title" class="tile-title">Hours</h2><p class="status" data-status><span class="status-dot"></span><span class="status-text">Mon–Sat, 9:30–7:00</span></p></div>
+            <div class="hours-viz hours-viz-row"><svg class="clock" viewBox="0 0 100 100" aria-hidden="true" data-clock>
+                <circle class="clock-face" cx="50" cy="50" r="46"/>
+                <line class="clock-tick" x1="50" y1="8" x2="50" y2="15" transform="rotate(0 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="12" transform="rotate(30 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="12" transform="rotate(60 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="15" transform="rotate(90 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="12" transform="rotate(120 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="12" transform="rotate(150 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="15" transform="rotate(180 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="12" transform="rotate(210 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="12" transform="rotate(240 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="15" transform="rotate(270 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="12" transform="rotate(300 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="12" transform="rotate(330 50 50)"/>
+                <line class="clock-h" data-clock-h x1="50" y1="50" x2="50" y2="28"/>
+                <line class="clock-m" data-clock-m x1="50" y1="50" x2="50" y2="16"/>
+                <line class="clock-s" data-clock-s x1="50" y1="58" x2="50" y2="12"/>
+                <circle class="clock-pin" cx="50" cy="50" r="3.2"/>
+              </svg><table class="hours " data-hours>
+                <caption class="visually-hidden">Office hours</caption>
+                <tbody>
+                  <tr data-day="1"><th scope="row">Monday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="2"><th scope="row">Tuesday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="3"><th scope="row">Wednesday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="4"><th scope="row">Thursday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="5"><th scope="row">Friday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="6"><th scope="row">Saturday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+                </tbody>
+              </table></div>
+            <p class="find-address">III Floor, Bridge Square Building, near Juice Junction, Balmatta, Mangaluru, Karnataka 575002</p>
+          </div>
+          <div class="map tile" data-map data-reveal>
+            <div class="map-art" aria-hidden="true">
+              <svg viewBox="0 0 600 420" class="map-svg">
+                <path class="road road-main" d="M-20 300 C 120 280, 220 250, 330 210 S 520 120, 640 90"/>
+                <path class="road" d="M180 -20 C 200 100, 240 180, 300 230 S 380 360, 400 460"/>
+                <path class="road road-thin" d="M-20 140 C 120 160, 260 150, 420 190"/>
+                <path class="road road-thin" d="M460 -20 C 450 120, 470 260, 560 440"/>
+              </svg>
+              <span class="pin pin-lg"><span class="pin-dot"></span><span class="pin-label">Bridge Square</span></span>
+            </div>
+            <div class="map-actions">
+              <button class="btn btn-ink" type="button" data-map-load><span class="btn-fill" aria-hidden="true"></span><span class="roll" data-text="Load the Google map"><span>Load the Google map</span></span></button>
+              <a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Pramod+Krishna+%26+Co+LLP%2C+Bridge+Square%2C+Balmatta%2C+Mangaluru" target="_blank" rel="noopener"><span class="roll" data-text="Open in Google Maps"><span>Open in Google Maps</span></span> <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+            </div>
+            <p class="map-fine">The map loads from Google only when you ask for it.</p>
+          </div>
         </div>
       </section>
-      <section class="launch-review section-pad">
-        <div class="page-width launch-review-grid">
-          <div><p class="eyebrow eyebrow-light"><span class="eyebrow-rule"></span> Before going live</p><h2>Confirm every detail<br>that carries the firm’s name.</h2></div>
-          <ul>
-            <li>Verify the legal name, address, phone and email.</li>
-            <li>Confirm partner roles, credentials and approved profiles.</li>
-            <li>Approve the service catalogue and all website copy.</li>
-            <li>Review current ICAI professional-conduct, website, advertising and solicitation requirements with an authorized professional reviewer.</li>
-            <li>Approve privacy terms and test any contact or data-collection flow.</li>
-          </ul>
+
+      <section class="privacy" aria-labelledby="privacy-title">
+        <div class="wrap privacy-grid">
+          <h2 id="privacy-title" class="display-3">About enquiries</h2>
+          <div>
+            <p>There is no enquiry form on this site. Tax and accounting enquiries often include PAN numbers, bank details or income figures, so please call or visit rather than sending documents by email.</p>
+            <div class="note-block" role="note">
+              <p class="note-block-title">Before this site goes live</p>
+              <ul class="checks">
+                <li><span class="box" aria-hidden="true"></span><span>Verify the legal name, address, PIN code, phone, email and hours.</span></li>
+                <li><span class="box" aria-hidden="true"></span><span>Confirm partner names, roles, credentials and profiles.</span></li>
+                <li><span class="box" aria-hidden="true"></span><span>Approve the service list and all website copy.</span></li>
+                <li><span class="box" aria-hidden="true"></span><span>Have an authorised reviewer check the site against current ICAI rules on websites, advertising and solicitation.</span></li>
+                <li><span class="box" aria-hidden="true"></span><span>Approve a privacy notice before any form or data collection is added.</span></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="page-width footer-main">
-        <div class="footer-brand"><a class="wordmark wordmark-footer" href="index.html"><span class="wordmark-name">Pramod Krishna <span>&amp; Co LLP</span></span><span class="wordmark-description">Chartered Accountants</span></a><p>Bridge Square, Balmatta<br>Mangaluru, Karnataka, India <span class="provisional">(location for confirmation)</span></p></div>
-        <nav class="footer-nav" aria-label="Footer navigation"><a href="about.html">About</a><a href="services.html">Services</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a></nav>
-        <div class="footer-note"><p>This is an independent website concept and is not an official or approved firm website.</p><p>Any published information would be general in nature and not individualized professional advice, subject to the firm’s review.</p></div>
+    <footer class="footer" data-footer data-tikku-say="That&rsquo;s the bottom. Want the number? Tap me.">
+      <div class="footer-inner wrap">
+        <div class="footer-top">
+          <p class="footer-call">Questions about a return, a notice or your books?<a href="tel:+919480151586" data-cursor="Call">94801&nbsp;51586</a></p>
+          <a class="to-top" href="#main" data-to-top data-magnetic aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+        </div>
+        <div class="footer-grid">
+          <div>
+            <h2 class="footer-head">Office</h2>
+            <p>III Floor, Bridge Square Building<br>Near Juice Junction, Balmatta<br>Mangaluru, Karnataka 575002</p>
+          </div>
+          <div>
+            <h2 class="footer-head">Hours</h2>
+            <p>Monday to Saturday<br>9:30 am to 7:00 pm<br>Closed on Sunday</p>
+          </div>
+          <div>
+            <h2 class="footer-head">Contact</h2>
+            <p><a href="tel:+919480151586">94801&nbsp;51586</a><br><a href="mailto:capramod123@gmail.com">capramod123@gmail.com</a><br><a href="https://www.google.com/maps/search/?api=1&amp;query=Pramod+Krishna+%26+Co+LLP%2C+Bridge+Square%2C+Balmatta%2C+Mangaluru" target="_blank" rel="noopener">Directions on Google Maps</a></p>
+          </div>
+          <nav aria-label="Footer">
+            <h2 class="footer-head">Pages</h2>
+            <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a>
+          </nav>
+        </div>
+        <p class="footer-name" translate="no" aria-hidden="true" data-footer-name>Pramod Krishna &amp; Co</p>
+        <div class="footer-base">
+          <span>&copy; <span data-year-now>2026</span> <span translate="no">Pramod Krishna &amp; Co LLP</span>, Chartered Accountants</span>
+          <span>Independent concept for the firm&rsquo;s review. Not the firm&rsquo;s official website, and not advice on any individual matter.</span>
+        </div>
       </div>
-      <div class="page-width footer-bottom"><span>© <span class="year">2026</span> Pramod Krishna &amp; Co LLP</span><span>Content and professional review required before launch</span></div>
     </footer>
   </body>
 </html>

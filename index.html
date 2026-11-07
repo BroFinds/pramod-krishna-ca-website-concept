@@ -2,170 +2,588 @@
 <html lang="en-IN">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="robots" content="noindex, nofollow">
-    <meta name="theme-color" content="#f8f6f1">
-    <meta name="description" content="A prospective website concept for Pramod Krishna &amp; Co LLP, Chartered Accountants in Mangaluru.">
+    <meta name="theme-color" content="#07140f">
+    <meta name="color-scheme" content="light">
+    <title>Pramod Krishna &amp; Co LLP | Chartered Accountants in Balmatta, Mangaluru</title>
+    <meta name="description" content="Income tax, GST, audit and accounting from Pramod Krishna &amp; Co LLP, III Floor, Bridge Square, Balmatta, Mangaluru. Open Monday to Saturday, 9:30 am to 7:00 pm. Website concept, not approved by the firm.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_IN">
-    <meta property="og:title" content="Pramod Krishna &amp; Co LLP | Chartered Accountants">
-    <meta property="og:description" content="A prospective website concept for a Chartered Accountancy firm in Mangaluru.">
-    <title>Pramod Krishna &amp; Co LLP | Chartered Accountants</title>
+    <meta property="og:site_name" content="Pramod Krishna &amp; Co LLP (website concept)">
+    <meta property="og:title" content="Pramod Krishna &amp; Co LLP | Chartered Accountants in Balmatta, Mangaluru">
+    <meta property="og:description" content="Income tax, GST, audit and accounting from Pramod Krishna &amp; Co LLP, III Floor, Bridge Square, Balmatta, Mangaluru. Open Monday to Saturday, 9:30 am to 7:00 pm. Website concept, not approved by the firm.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="fonts/bricolage-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
+    <script>
+      (function (d, w) {
+        var r = d.documentElement;
+        r.classList.add("js");
+        if (!(w.matchMedia && w.matchMedia("(prefers-reduced-motion: reduce)").matches)) r.classList.add("fx");
+        try {
+          if (localStorage.getItem("pkc-review-notes") === "on") r.dataset.notes = "on";
+          if (sessionStorage.getItem("pkc-curtain") === "1") r.classList.add("is-arriving");
+        } catch (e) {}
+        setTimeout(function () {
+          if (!w.__pkcReady) r.classList.remove("fx", "is-arriving");
+        }, 2500);
+      })(document, window);
+    </script>
+    <script src="vendor/gsap.min.js" defer></script>
+    <script src="vendor/ScrollTrigger.min.js" defer></script>
+    <script src="vendor/lenis.min.js" defer></script>
     <script src="site-effects.js" defer></script>
   </head>
   <body>
-    <div class="reading-progress" aria-hidden="true"><span></span></div>
     <a class="skip-link" href="#main">Skip to content</a>
-    <div class="concept-notice">Independent website concept · Not authorized or approved by the firm</div>
-    <header class="site-header">
-      <a class="wordmark" href="index.html" aria-label="Pramod Krishna and Company LLP, home">
-        <span class="wordmark-name">Pramod Krishna <span>&amp; Co LLP</span></span>
-        <span class="wordmark-description">Chartered Accountants</span>
-      </a>
-      <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="insights.html">Insights</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <a class="header-contact" href="contact.html">Contact the office <span aria-hidden="true">↗</span></a>
-      <details class="mobile-nav">
-        <summary aria-label="Toggle navigation menu"><span></span><span></span></summary>
-        <nav class="mobile-menu-list" aria-label="Mobile navigation">
-          <p class="mobile-menu-heading">Navigate</p>
-          <a href="index.html" aria-current="page"><span class="menu-number">01</span><span>Home</span><span class="menu-arrow" aria-hidden="true">↗</span></a>
-          <a href="about.html"><span class="menu-number">02</span><span>About</span><span class="menu-arrow" aria-hidden="true">↗</span></a>
-          <a href="services.html"><span class="menu-number">03</span><span>Services</span><span class="menu-arrow" aria-hidden="true">↗</span></a>
-          <a href="insights.html"><span class="menu-number">04</span><span>Insights</span><span class="menu-arrow" aria-hidden="true">↗</span></a>
-          <a href="contact.html"><span class="menu-number">05</span><span>Contact</span><span class="menu-arrow" aria-hidden="true">↗</span></a>
+    <div class="curtain" aria-hidden="true"><span class="curtain-coin"></span><span class="curtain-mark">PK&amp;Co</span></div>
+    <div class="cursor is-hidden" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"><span class="cursor-label"></span></span></div>
+
+    <aside class="banner" aria-label="Website status">
+      <p><strong>Independent concept.</strong> <span class="banner-long">Not authorised or approved by the firm.</span><span class="banner-short">Not approved by the firm.</span></p>
+      <button class="notes-toggle" type="button" aria-pressed="false" data-notes-toggle hidden>
+        <span class="notes-toggle-track" aria-hidden="true"></span>
+        <span class="notes-toggle-label">Review notes</span>
+      </button>
+    </aside>
+
+    <header class="header" data-header>
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-current="page">
+          <span class="brand-mark" aria-hidden="true">PK</span>
+          <span class="brand-text"><span class="brand-name" translate="no">Pramod Krishna &amp; Co LLP</span><span class="brand-role">Chartered Accountants</span></span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          <a href="about.html"><span class="roll" data-text="About"><span>About</span></span></a>
+          <a href="services.html"><span class="roll" data-text="Services"><span>Services</span></span></a>
+          <a href="insights.html"><span class="roll" data-text="Insights"><span>Insights</span></span></a>
+          <a href="contact.html"><span class="roll" data-text="Contact"><span>Contact</span></span></a>
         </nav>
-      </details>
+        <div class="header-end">
+          <span class="status status-pill" data-status><span class="status-dot" aria-hidden="true"></span><span class="status-text">Mon–Sat, 9:30–7:00</span></span>
+          <a class="pill" href="tel:+919480151586" data-magnetic data-cursor="Call"><span class="roll" data-text="Call the office"><span>Call the office</span></span></a>
+        </div>
+        <details class="menu" data-menu>
+          <summary aria-label="Menu"><span class="menu-icon" aria-hidden="true"><span></span><span></span></span></summary>
+          <div class="menu-panel">
+            <nav aria-label="Main">
+              <a href="index.html" aria-current="page"><span class="menu-index">01</span><span class="menu-word">Home</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="about.html"><span class="menu-index">02</span><span class="menu-word">About</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="services.html"><span class="menu-index">03</span><span class="menu-word">Services</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="insights.html"><span class="menu-index">04</span><span class="menu-word">Insights</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="contact.html"><span class="menu-index">05</span><span class="menu-word">Contact</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </nav>
+            <div class="menu-foot">
+              <p class="status" data-status><span class="status-dot" aria-hidden="true"></span><span class="status-text">Mon–Sat, 9:30–7:00</span></p>
+              <a class="menu-call" href="tel:+919480151586"><svg class="icon-phone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>94801&nbsp;51586</span></a>
+              <p>III Floor, Bridge Square, Balmatta, Mangaluru</p>
+            </div>
+          </div>
+        </details>
+      </div>
     </header>
 
+    <div class="tikku" data-tikku>
+      <div class="tikku-bubble" data-tikku-bubble aria-live="polite"></div>
+      <div class="tikku-panel" id="tikku-panel" role="dialog" aria-label="Quick help from Tikku" data-tikku-panel hidden>
+        <div class="tp-head">
+          <p class="tp-hello" data-tikku-hello>Hi, I&rsquo;m Tikku.</p>
+          <button class="tp-close" type="button" aria-label="Close quick help" data-tikku-close><span aria-hidden="true"></span></button>
+        </div>
+        <p class="status tp-status" data-status><span class="status-dot" aria-hidden="true"></span><span class="status-text">Mon–Sat, 9:30 am to 7:00 pm</span></p>
+        <ul class="tp-actions">
+          <li><a href="tel:+919480151586" data-cursor="Call"><svg class="icon-phone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>Call 94801&nbsp;51586</span></a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Pramod+Krishna+%26+Co+LLP%2C+Bridge+Square%2C+Balmatta%2C+Mangaluru" target="_blank" rel="noopener" data-cursor="Map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span>Get directions</span></a></li>
+          <li>
+            <button type="button" aria-expanded="false" aria-controls="tp-hours" data-accordion><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Office hours</span><span class="acc-chev" aria-hidden="true"></span></button>
+            <div class="acc-body" id="tp-hours" hidden>
+              <table class="hours hours-mini" data-hours>
+                <caption class="visually-hidden">Office hours</caption>
+                <tbody>
+                  <tr data-day="1"><th scope="row">Monday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="2"><th scope="row">Tuesday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="3"><th scope="row">Wednesday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="4"><th scope="row">Thursday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="5"><th scope="row">Friday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="6"><th scope="row">Saturday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+          <li><a href="services.html#taxation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7M9 8h3"/></svg><span>What should I bring?</span></a></li>
+        </ul>
+        <button class="tp-hide" type="button" data-tikku-hide>Hide Tikku</button>
+      </div>
+      <button class="tikku-btn" type="button" aria-expanded="false" aria-controls="tikku-panel" aria-label="Tikku: quick help with hours, directions and calling the office" data-tikku-btn data-cursor="Hi!">
+        <span class="tikku-body" data-tikku-body>
+          <svg class="tk" viewBox="0 0 120 140" aria-hidden="true" focusable="false">
+            <defs>
+              <radialGradient id="tkBody" cx="36%" cy="30%" r="78%">
+                <stop offset="0" stop-color="#FFE7A8"/>
+                <stop offset=".5" stop-color="#F6BC45"/>
+                <stop offset="1" stop-color="#DB8E1C"/>
+              </radialGradient>
+            </defs>
+            <ellipse class="tk-shadow" cx="60" cy="133" rx="25" ry="4.5"/>
+            <g class="tk-all">
+              <g class="tk-feet"><ellipse cx="46" cy="124" rx="9.5" ry="5.5"/><ellipse cx="74" cy="124" rx="9.5" ry="5.5"/></g>
+              <g class="tk-arm tk-arm-l"><path d="M20 78c-9 3-13 10-13 18"/></g>
+              <g class="tk-arm tk-arm-r"><path d="M100 76c9-3 14-10 15-19"/></g>
+              <g class="tk-antenna"><path class="tk-stalk" d="M60 32V17"/><path class="tk-tick" d="M49 10l7 7 13-14"/></g>
+              <circle class="tk-body" cx="60" cy="76" r="44"/>
+              <circle class="tk-rim" cx="60" cy="76" r="36"/>
+              <g class="tk-face">
+                <g class="tk-eye tk-eye-l"><ellipse cx="45" cy="70" rx="9.5" ry="11"/><circle class="tk-pupil" cx="45" cy="71" r="4.6"/><circle class="tk-glint" cx="47" cy="68.5" r="1.5"/></g>
+                <g class="tk-eye tk-eye-r"><ellipse cx="75" cy="70" rx="9.5" ry="11"/><circle class="tk-pupil" cx="75" cy="71" r="4.6"/><circle class="tk-glint" cx="77" cy="68.5" r="1.5"/></g>
+                <ellipse class="tk-cheek" cx="34" cy="86" rx="5.5" ry="3.2"/>
+                <ellipse class="tk-cheek" cx="86" cy="86" rx="5.5" ry="3.2"/>
+                <path class="tk-mouth tk-smile" d="M51 88c5 7 13 7 18 0"/>
+                <ellipse class="tk-mouth tk-oh" cx="60" cy="91" rx="4.5" ry="5.5"/>
+                <path class="tk-mouth tk-sleep" d="M54 90h12"/>
+              </g>
+              <g class="tk-zzz"><text x="92" y="30">z</text><text x="100" y="18">z</text><text x="106" y="8">z</text></g>
+            </g>
+          </svg>
+        </span>
+      </button>
+      <button class="tikku-peek" type="button" aria-label="Show Tikku" data-tikku-show hidden><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></button>
+    </div>
+
     <main id="main">
-      <section class="hero page-width" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-rule"></span> Chartered Accountants <span class="eyebrow-separator">/</span> Mangaluru</p>
-          <h1 id="hero-title">Clarity in numbers.<br><em>Confidence in decisions.</em></h1>
-          <p class="hero-intro">A considered approach to accounting, taxation and the financial responsibilities behind everyday decisions.</p>
-          <div class="hero-actions">
-            <a class="button button-dark" href="services.html">Explore proposed services <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="contact.html">Contact the office <span aria-hidden="true">↗</span></a>
+      <section class="hero" data-hero aria-labelledby="hero-title" data-tikku-say="Hi, I&rsquo;m Tikku! Tap me for hours, directions or a quick call.">
+        <div class="aurora" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="blob b4"></span></div>
+        <div class="grid-glow" aria-hidden="true"></div>
+        <div class="hero-inner wrap">
+          <div class="hero-copy">
+            <p class="eyebrow-pill" data-hero-fade><span class="pill-coin" aria-hidden="true">&#8377;</span>Chartered Accountants &middot; Balmatta, Mangaluru</p>
+            <h1 id="hero-title" class="hero-title">
+              <span class="visually-hidden">Your income tax, GST returns, audit and books, sorted.</span>
+              <span class="hero-lines" aria-hidden="true" data-split>
+                <span class="ln"><span>Your</span></span>
+                <span class="ln"><span class="rotator" data-rotator><span class="rot-word">income tax</span><span class="rot-word">GST returns</span><span class="rot-word">audit</span><span class="rot-word">books</span></span></span>
+                <span class="ln"><span>sorted<span class="hero-dot">.</span></span></span>
+              </span>
+            </h1>
+            <p class="hero-lede" data-hero-fade><strong translate="no">Pramod Krishna &amp; Co LLP</strong> is a chartered accountancy practice on the third floor of Bridge Square in Balmatta, working since 2017.</p>
+            <div class="hero-actions" data-hero-fade>
+              <a class="btn btn-saffron" href="tel:+919480151586" data-magnetic data-cursor="Call"><span class="btn-fill" aria-hidden="true"></span><svg class="icon-phone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="roll" data-text="Call 94801 51586"><span>Call 94801&nbsp;51586</span></span></a>
+              <a class="btn btn-glass" href="services.html" data-magnetic data-cursor="Open"><span class="btn-fill" aria-hidden="true"></span><span class="roll" data-text="See what we handle"><span>See what we handle</span></span></a>
+            </div>
+            <p class="note" role="note"><b>To confirm</b><span>Hours, phone, email, the address and &ldquo;since 2017&rdquo; are taken from public directory listings (ThreeBestRated, Justdial). The firm has not confirmed them.</span></p>
+          </div>
+          <div class="hero-stage" aria-hidden="true" data-stage>
+            <div class="fcard fc-itr" data-depth="1.2"><span class="fc-icon"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span><b>Return filed</b><small>Refund &#8377;4,210 on its way</small></span></div>
+            <div class="fcard fc-gst" data-depth="0.7"><span class="fc-badge">GSTR-3B</span><b>12 of 12 filed</b><span class="fc-bar"><i></i></span></div>
+            <div class="fcard fc-form" data-depth="1.6"><span class="fc-doc"></span><span><b>Form 16</b><small>Received</small></span></div>
+            <div class="fcard fc-open" data-depth="0.9"><p class="status" data-status><span class="status-dot"></span><span class="status-text">Mon–Sat, 9:30–7:00</span></p></div>
+            <div class="mascot-slot" data-mascot-slot></div>
+            <div class="stage-ring r1"></div><div class="stage-ring r2"></div>
           </div>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="folio-scene">
-            <div class="folio-shadow"></div>
-            <div class="folio-stack">
-              <div class="folio-sheet folio-sheet-back"></div>
-              <div class="folio-sheet folio-sheet-middle"></div>
-              <div class="folio-sheet folio-sheet-front">
-                <div class="folio-header">
-                  <span></span>
-                  <span></span>
-                </div>
-                <div class="folio-title-lines"><span></span><span></span></div>
-                <div class="folio-table">
-                  <div><span></span><span></span></div>
-                  <div><span></span><span></span></div>
-                  <div><span></span><span></span></div>
-                  <div><span></span><span></span></div>
-                  <div><span></span><span></span></div>
-                </div>
-                <div class="folio-total"></div>
+        <div class="hero-bottom wrap" data-hero-fade>
+          <p>III Floor, Bridge Square, near Juice Junction</p>
+          <p class="scroll-cue"><span aria-hidden="true"></span>Scroll</p>
+        </div>
+      </section>
+
+      <div class="marquee" data-marquee aria-hidden="true">
+        <div class="marquee-track"><span>Income tax returns</span><i class="mq-dot"></i><span>GST filings</span><i class="mq-dot"></i><span>Statutory audit</span><i class="mq-dot"></i><span>Tax audit</span><i class="mq-dot"></i><span>Bookkeeping</span><i class="mq-dot"></i><span>Financial statements</span><i class="mq-dot"></i><span>CMA data</span><i class="mq-dot"></i><span>Business advisory</span><i class="mq-dot"></i><span>Income tax returns</span><i class="mq-dot"></i><span>GST filings</span><i class="mq-dot"></i><span>Statutory audit</span><i class="mq-dot"></i><span>Tax audit</span><i class="mq-dot"></i><span>Bookkeeping</span><i class="mq-dot"></i><span>Financial statements</span><i class="mq-dot"></i><span>CMA data</span><i class="mq-dot"></i><span>Business advisory</span><i class="mq-dot"></i></div>
+      </div>
+
+      <section class="say" aria-label="How the work is done" data-tikku-say="Paper or PDF, both are fine.">
+        <div class="wrap">
+          <p class="say-text" data-highlight>Bring the pile of papers. Form 16, bank statements, invoices, that notice you have been avoiding. It gets sorted, reconciled and filed, and you get a plain explanation of what it all means.</p>
+        </div>
+      </section>
+
+      <section class="story" data-story aria-labelledby="story-title" data-tikku-say="Watch the pile sort itself out. Satisfying, right?">
+        <div class="story-pin wrap">
+          <div class="story-copy">
+            <p class="label">How it works</p>
+            <h2 id="story-title" class="display-2" data-split><span class="ln"><span>From a shoebox</span></span><span class="ln"><span>to a finished file.</span></span></h2>
+            <ol class="story-steps">
+              <li data-step><span class="step-num">1</span><div><h3>You bring what you have</h3><p>Form 16, statements, invoices, receipts, last year&rsquo;s return, any notices. Paper or PDF.</p></div></li>
+              <li data-step><span class="step-num">2</span><div><h3>It gets sorted and checked</h3><p>Each document is matched against your bank, the GST portal and the department&rsquo;s own records.</p></div></li>
+              <li data-step><span class="step-num">3</span><div><h3>Filed, and explained</h3><p>Returns filed and books closed, with a plain note on what was filed and what is due next.</p></div></li>
+            </ol>
+          </div>
+          <div class="story-stage" aria-hidden="true">
+            <div class="docs">
+              <div class="doc d-form16" data-doc>
+                <p class="doc-title">Form 16</p>
+                <p class="doc-sub">TDS certificate</p>
+                <dl><div><dt>Gross salary</dt><dd>&#8377;&thinsp;9,84,000</dd></div><div><dt>Tax deducted</dt><dd>&#8377;&thinsp;62,400</dd></div></dl>
+
+              </div>
+              <div class="doc d-invoice" data-doc>
+                <p class="doc-title">Tax invoice</p>
+                <p class="doc-sub">GSTIN 29AAAAA0000A1Z5</p>
+                <dl><div><dt>Taxable value</dt><dd>&#8377;&thinsp;1,20,000</dd></div><div><dt>GST 18%</dt><dd>&#8377;&thinsp;21,600</dd></div></dl>
+
+              </div>
+              <div class="doc d-bank" data-doc>
+                <p class="doc-title">Bank statement</p>
+                <p class="doc-sub">Savings &middot; Apr&ndash;Mar</p>
+                <dl><div><dt>Interest</dt><dd>&#8377;&thinsp;18,240</dd></div><div><dt>Entries</dt><dd>312</dd></div></dl>
+
+              </div>
+              <div class="doc d-rent" data-doc>
+                <p class="doc-title">Rent receipt</p>
+                <p class="doc-sub">Received with thanks</p>
+                <dl><div><dt>March</dt><dd>&#8377;&thinsp;22,000</dd></div></dl>
+
+              </div>
+              <div class="doc d-ais" data-doc>
+                <p class="doc-title">Annual information</p>
+                <p class="doc-sub">As reported to the department</p>
+                <dl><div><dt>Dividend</dt><dd>&#8377;&thinsp;6,120</dd></div><div><dt>Securities sold</dt><dd>&#8377;&thinsp;2,40,000</dd></div></dl>
+
+              </div>
+              <div class="doc d-bill" data-doc>
+                <p class="doc-title">Purchase bill</p>
+                <p class="doc-sub">Credit, 30 days</p>
+                <dl><div><dt>Goods</dt><dd>&#8377;&thinsp;84,000</dd></div><div><dt>IGST 18%</dt><dd>&#8377;&thinsp;15,120</dd></div></dl>
+
+              </div>
+              <div class="doc d-notice" data-doc>
+                <p class="doc-title">Tax notice</p>
+                <p class="doc-sub">Response required</p>
+                <dl><div><dt>Mismatch</dt><dd>&#8377;&thinsp;6,120</dd></div><div><dt>Reply within</dt><dd>30 days</dd></div></dl>
+                <span class="doc-stamp">Reply due</span>
+              </div>
+              <div class="doc d-itr" data-doc>
+                <p class="doc-title">Last year&rsquo;s return</p>
+                <p class="doc-sub">Acknowledgement</p>
+                <dl><div><dt>Total income</dt><dd>&#8377;&thinsp;8,76,300</dd></div><div><dt>Refund</dt><dd>&#8377;&thinsp;4,210</dd></div></dl>
+
               </div>
             </div>
-            <span class="folio-caption">A considered view of the detail</span>
-          </div>
-        </div>
-        <div class="hero-footnote" aria-label="Concept details">
-          <p><span>Location</span> Mangaluru, Karnataka</p>
-          <p><span>Service scope</span> Suggested areas awaiting firm confirmation</p>
-        </div>
-      </section>
-
-      <section class="intro-section section-pad" aria-labelledby="intro-title">
-        <div class="page-width intro-grid">
-          <p class="section-index">A measured perspective</p>
-          <div class="intro-main">
-            <h2 id="intro-title">Good financial decisions start with a clear picture.</h2>
-            <div class="intro-detail">
-              <p>Accounting and compliance involve more than deadlines and documents. They call for accurate information, sound judgment and a clear understanding of what comes next.</p>
-              <a class="text-link" href="about.html">About the firm <span aria-hidden="true">↗</span></a>
+            <div class="ledger" data-ledger>
+              <p class="ledger-head"><span>Year-end file</span><span class="ledger-chip">Done</span></p>
+              <ul>
+                <li><span>Income tax return</span><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></li>
+                <li><span>GST returns, 12 of 12</span><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></li>
+                <li><span>Bank reconciled</span><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></li>
+                <li><span>Notice answered</span><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></li>
+              </ul>
+              <p class="ledger-total"><span>All figures agree</span><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="services-preview section-pad" aria-labelledby="services-title">
-        <div class="page-width">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow"><span class="eyebrow-rule"></span> For review</p>
-              <h2 id="services-title">Proposed service areas</h2>
-            </div>
-            <p class="section-aside">These suggested areas are drafts for discussion. The firm must confirm its current services and approve all descriptions before publication.</p>
+      <section class="work" aria-labelledby="work-title" data-tikku-say="Six areas of work. Keep scrolling, they stack up.">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="label label-light">What we handle</p>
+            <h2 id="work-title" class="display-2" data-split><span class="ln"><span>Six areas of work,</span></span><span class="ln"><span><em>one office.</em></span></span></h2>
           </div>
-          <div class="service-preview-list">
-            <a class="service-preview-item" href="services.html#taxation"><span class="service-number">01</span><span class="service-name">Taxation &amp; tax advisory</span><span class="service-summary">Tax-related responsibilities and questions, subject to the firm’s confirmed scope.</span><span class="item-arrow" aria-hidden="true">↗</span></a>
-            <a class="service-preview-item" href="services.html#gst"><span class="service-number">02</span><span class="service-name">GST &amp; compliance</span><span class="service-summary">Records, filings and compliance processes, pending firm confirmation.</span><span class="item-arrow" aria-hidden="true">↗</span></a>
-            <a class="service-preview-item" href="services.html#audit"><span class="service-number">03</span><span class="service-name">Audit &amp; assurance</span><span class="service-summary">Potential audit or assurance work within approved professional appointments.</span><span class="item-arrow" aria-hidden="true">↗</span></a>
-            <a class="service-preview-item" href="services.html#accounting"><span class="service-number">04</span><span class="service-name">Accounting &amp; reporting</span><span class="service-summary">Records and financial reporting, based on an agreed engagement scope.</span><span class="item-arrow" aria-hidden="true">↗</span></a>
+          <div class="stack">
+            <article class="stack-card t-forest" style="--i:0" data-stack-card>
+              <div class="sc-inner">
+                <div class="sc-top">
+                  <span class="sc-num">01<span>/06</span></span>
+                  <svg class="svc-icon" viewBox="0 0 64 64" aria-hidden="true" data-draw><path d="M14 6h28l10 10v42H14z"/><path d="M42 6v10h10"/><path d="M24 26h16M24 33h16M31 26c6 0 6 7 0 7h-5l12 12"/></svg>
+                </div>
+                <div class="sc-main">
+                  <h3 class="sc-title">Taxation &amp; tax advisory</h3>
+                  <p class="sc-line">Returns, advance tax and replies to notices, for salaried people, professionals and businesses.</p>
+                </div>
+                <ul class="sc-list">
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Income tax returns and the computation behind each one</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Advance tax estimates during the year</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Replies to notices, and representation in assessments</span></li>
+                </ul>
+                <a class="sc-link" href="services.html#taxation" data-cursor="Open"><span class="roll" data-text="Read the detail"><span>Read the detail</span></span> <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </article>
+            <article class="stack-card t-saffron" style="--i:1" data-stack-card>
+              <div class="sc-inner">
+                <div class="sc-top">
+                  <span class="sc-num">02<span>/06</span></span>
+                  <svg class="svc-icon" viewBox="0 0 64 64" aria-hidden="true" data-draw><rect x="8" y="12" width="22" height="30" rx="2"/><rect x="34" y="22" width="22" height="30" rx="2"/><path d="M13 20h12M13 26h12M39 30h12M39 36h12"/><path d="M24 50c6 4 14 4 20-2M44 48v-5h-5"/></svg>
+                </div>
+                <div class="sc-main">
+                  <h3 class="sc-title">GST &amp; compliance</h3>
+                  <p class="sc-line">Registration, monthly or quarterly returns, and matching input credit to what suppliers have filed.</p>
+                </div>
+                <ul class="sc-list">
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Registration, amendments and cancellation</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Monthly or quarterly returns</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Reconciling input tax credit with supplier filings</span></li>
+                </ul>
+                <a class="sc-link" href="services.html#gst" data-cursor="Open"><span class="roll" data-text="Read the detail"><span>Read the detail</span></span> <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </article>
+            <article class="stack-card t-mint" style="--i:2" data-stack-card>
+              <div class="sc-inner">
+                <div class="sc-top">
+                  <span class="sc-num">03<span>/06</span></span>
+                  <svg class="svc-icon" viewBox="0 0 64 64" aria-hidden="true" data-draw><circle cx="27" cy="27" r="16"/><path d="M39 39l15 15"/><path d="M19 27.5c2 1 3.4 2.6 4.6 4.8 2.5-5.2 6-9 10.6-11.8"/></svg>
+                </div>
+                <div class="sc-main">
+                  <h3 class="sc-title">Audit &amp; assurance</h3>
+                  <p class="sc-line">Statutory and tax audits where the law requires one, and independent reviews where it doesn&rsquo;t.</p>
+                </div>
+                <ul class="sc-list">
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Statutory audits of companies and LLPs</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Tax audits, where turnover or receipts cross the limit</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Internal audits and reviews of specific processes</span></li>
+                </ul>
+                <a class="sc-link" href="services.html#audit" data-cursor="Open"><span class="roll" data-text="Read the detail"><span>Read the detail</span></span> <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </article>
+            <article class="stack-card t-sky" style="--i:3" data-stack-card>
+              <div class="sc-inner">
+                <div class="sc-top">
+                  <span class="sc-num">04<span>/06</span></span>
+                  <svg class="svc-icon" viewBox="0 0 64 64" aria-hidden="true" data-draw><path d="M10 12h20c3 0 4 2 4 4v38c0-2-1-4-4-4H10z"/><path d="M54 12H38c-3 0-4 2-4 4v38c0-2 1-4 4-4h16z"/><path d="M15 22h12M15 29h12M15 36h8M40 22h9M40 29h9M40 36h9"/></svg>
+                </div>
+                <div class="sc-main">
+                  <h3 class="sc-title">Accounting &amp; bookkeeping</h3>
+                  <p class="sc-line">Books kept, balances reconciled, and the year closed on time.</p>
+                </div>
+                <ul class="sc-list">
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Day-to-day bookkeeping</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Bank, party and ledger reconciliations</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Month-end and year-end closing</span></li>
+                </ul>
+                <a class="sc-link" href="services.html#accounting" data-cursor="Open"><span class="roll" data-text="Read the detail"><span>Read the detail</span></span> <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </article>
+            <article class="stack-card t-coral" style="--i:4" data-stack-card>
+              <div class="sc-inner">
+                <div class="sc-top">
+                  <span class="sc-num">05<span>/06</span></span>
+                  <svg class="svc-icon" viewBox="0 0 64 64" aria-hidden="true" data-draw><path d="M8 54h48"/><path d="M14 54V36h8v18M28 54V24h8v30M42 54V14h8v40"/><path d="M12 28l12-10 10 6 16-14"/></svg>
+                </div>
+                <div class="sc-main">
+                  <h3 class="sc-title">Financial reporting</h3>
+                  <p class="sc-line">Financial statements, and the projections and CMA data banks ask for.</p>
+                </div>
+                <ul class="sc-list">
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Annual financial statements with notes and schedules</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Projections and CMA data for bank loans</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Periodic reports for owners and management</span></li>
+                </ul>
+                <a class="sc-link" href="services.html#reporting" data-cursor="Open"><span class="roll" data-text="Read the detail"><span>Read the detail</span></span> <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </article>
+            <article class="stack-card t-ink" style="--i:5" data-stack-card>
+              <div class="sc-inner">
+                <div class="sc-top">
+                  <span class="sc-num">06<span>/06</span></span>
+                  <svg class="svc-icon" viewBox="0 0 64 64" aria-hidden="true" data-draw><circle cx="32" cy="32" r="22"/><path d="M40 24l-5 11-11 5 5-11z"/><path d="M32 6v5M32 53v5M6 32h5M53 32h5"/></svg>
+                </div>
+                <div class="sc-main">
+                  <h3 class="sc-title">Business &amp; financial advisory</h3>
+                  <p class="sc-line">Business structure, registrations and the tax side of larger decisions.</p>
+                </div>
+                <ul class="sc-list">
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Choosing a structure: proprietorship, partnership, LLP or company</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Registrations when a business starts or changes</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>The tax effect of a sale, purchase or restructuring</span></li>
+                </ul>
+                <a class="sc-link" href="services.html#advisory" data-cursor="Open"><span class="roll" data-text="Read the detail"><span>Read the detail</span></span> <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </article>
           </div>
-          <div class="section-end-link"><a class="text-link" href="services.html">Review all proposed areas <span aria-hidden="true">↗</span></a></div>
+          <p class="note" role="note"><b>To confirm</b><span>The service list and descriptions are drafts. Remove or rewrite anything the firm does not offer.</span></p>
         </div>
       </section>
 
-      <section class="approach-band section-pad" aria-labelledby="approach-title">
-        <div class="page-width approach-grid">
-          <div class="approach-heading">
-            <p class="eyebrow eyebrow-light"><span class="eyebrow-rule"></span> A working approach</p>
-            <h2 id="approach-title">Care in the detail.<br>Clarity in the next step.</h2>
-            <p class="approach-note">Proposed principles for the firm to review and confirm.</p>
+      <section class="bento-section" aria-labelledby="bento-title" data-tikku-say="Tick off what you have before you visit!">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="label">Visit the office</p>
+            <h2 id="bento-title" class="display-2" data-split><span class="ln"><span>Third floor,</span></span><span class="ln"><span><em>Bridge Square.</em></span></span></h2>
           </div>
-          <div class="approach-list">
-            <article><span class="approach-symbol" aria-hidden="true">—</span><div><h3>Understand the context</h3><p>Begin with the requirements, records and circumstances relevant to the work.</p></div></article>
-            <article><span class="approach-symbol" aria-hidden="true">—</span><div><h3>Work carefully</h3><p>Handle financial information with professional care and attention to detail.</p></div></article>
-            <article><span class="approach-symbol" aria-hidden="true">—</span><div><h3>Make requirements clear</h3><p>Set out the information needed and explain the next steps in plain language.</p></div></article>
+          <div class="bento">
+            <article class="tile tile-hours" data-tile data-tilt>
+              <div class="tile-head"><p class="tile-label">Office hours</p><p class="status" data-status><span class="status-dot"></span><span class="status-text">Mon–Sat, 9:30–7:00</span></p></div>
+              <div class="hours-viz">
+                <svg class="clock" viewBox="0 0 100 100" aria-hidden="true" data-clock>
+                <circle class="clock-face" cx="50" cy="50" r="46"/>
+                <line class="clock-tick" x1="50" y1="8" x2="50" y2="15" transform="rotate(0 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="12" transform="rotate(30 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="12" transform="rotate(60 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="15" transform="rotate(90 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="12" transform="rotate(120 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="12" transform="rotate(150 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="15" transform="rotate(180 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="12" transform="rotate(210 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="12" transform="rotate(240 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="15" transform="rotate(270 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="12" transform="rotate(300 50 50)"/><line class="clock-tick" x1="50" y1="8" x2="50" y2="12" transform="rotate(330 50 50)"/>
+                <line class="clock-h" data-clock-h x1="50" y1="50" x2="50" y2="28"/>
+                <line class="clock-m" data-clock-m x1="50" y1="50" x2="50" y2="16"/>
+                <line class="clock-s" data-clock-s x1="50" y1="58" x2="50" y2="12"/>
+                <circle class="clock-pin" cx="50" cy="50" r="3.2"/>
+              </svg>
+                <ol class="week" data-week>
+                  <li data-day="1" class=""><span class="week-bar"><i></i></span><span>M</span></li><li data-day="2" class=""><span class="week-bar"><i></i></span><span>T</span></li><li data-day="3" class=""><span class="week-bar"><i></i></span><span>W</span></li><li data-day="4" class=""><span class="week-bar"><i></i></span><span>T</span></li><li data-day="5" class=""><span class="week-bar"><i></i></span><span>F</span></li><li data-day="6" class=""><span class="week-bar"><i></i></span><span>S</span></li><li data-day="0" class="is-off"><span class="week-bar"><i></i></span><span>S</span></li>
+                </ol>
+              </div>
+              <p class="tile-foot">Monday to Saturday, 9:30 am to 7:00 pm. Closed Sunday. Times in IST.</p>
+            </article>
+            <a class="tile tile-call" href="tel:+919480151586" data-tile data-tilt data-cursor="Call">
+              <p class="tile-label">Call the office</p>
+              <span class="call-icon"><svg class="icon-phone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+              <p class="tile-big">94801&nbsp;51586</p>
+              <p class="tile-foot">During office hours <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+            </a>
+            <article class="tile tile-since" data-tile data-tilt>
+              <p class="tile-label">In practice since</p>
+              <p class="odometer" data-odometer="2017" aria-label="2017">
+                <span class="odo-col" aria-hidden="true"><span class="odo-strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span><span class="odo-col" aria-hidden="true"><span class="odo-strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span><span class="odo-col" aria-hidden="true"><span class="odo-strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span><span class="odo-col" aria-hidden="true"><span class="odo-strip"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span>
+                <span class="odo-static">2017</span>
+              </p>
+              <p class="tile-foot">An LLP of chartered accountants in Balmatta.</p>
+            </article>
+            <article class="tile tile-bring" data-tile>
+              <p class="tile-label">Before your first visit</p>
+              <ul class="bring-check" data-checklist>
+                <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>PAN and Aadhaar</span></button></li>
+                <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Form 16</span></button></li>
+                <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Bank statements</span></button></li>
+                <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Last year&rsquo;s return</span></button></li>
+              </ul>
+              <p class="tile-foot"><span data-check-count>0 of 4</span> ready. <a href="services.html">Full lists by service</a></p>
+            </article>
+            <a class="tile tile-map" href="https://www.google.com/maps/search/?api=1&amp;query=Pramod+Krishna+%26+Co+LLP%2C+Bridge+Square%2C+Balmatta%2C+Mangaluru" target="_blank" rel="noopener" data-tile data-tilt data-cursor="Map">
+              <svg class="mini-map" viewBox="0 0 300 200" aria-hidden="true">
+                <path class="road road-main" d="M-10 150 C 60 140, 110 120, 165 100 S 260 50, 320 40"/>
+                <path class="road" d="M90 -10 C 100 50, 120 90, 150 115 S 190 180, 200 220"/>
+                <path class="road road-thin" d="M-10 70 C 60 80, 130 75, 210 95"/>
+              </svg>
+              <span class="pin" aria-hidden="true"><span class="pin-dot"></span></span>
+              <div class="tile-map-copy">
+                <p class="tile-label">Find us</p>
+                <p class="tile-mid">Near Juice Junction, Balmatta</p>
+                <p class="tile-foot">Open in Google Maps <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></p>
+              </div>
+            </a>
+            <article class="tile tile-roof" data-tile>
+              <div class="roof" aria-hidden="true" data-tiles><svg viewBox="0 0 480 310" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g class="tile-row"><path class="rtile t-warm" d="M-32 231h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M0 237v33.1"/><path class="rtile" d="M32 231h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M64 237v33.1"/><path class="rtile" d="M96 231h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M128 237v33.1"/><path class="rtile" d="M160 231h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M192 237v33.1"/><path class="rtile" d="M224 231h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M256 237v33.1"/><path class="rtile" d="M288 231h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M320 237v33.1"/><path class="rtile" d="M352 231h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M384 237v33.1"/><path class="rtile" d="M416 231h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M448 237v33.1"/></g><g class="tile-row"><path class="rtile" d="M0 198h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M32 204v33.1"/><path class="rtile" d="M64 198h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M96 204v33.1"/><path class="rtile" d="M128 198h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M160 204v33.1"/><path class="rtile" d="M192 198h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M224 204v33.1"/><path class="rtile t-warm" d="M256 198h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M288 204v33.1"/><path class="rtile" d="M320 198h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M352 204v33.1"/><path class="rtile" d="M384 198h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M416 204v33.1"/><path class="rtile t-warm" d="M448 198h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M480 204v33.1"/></g><g class="tile-row"><path class="rtile" d="M-32 165h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M0 171v33.1"/><path class="rtile" d="M32 165h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M64 171v33.1"/><path class="rtile t-warm" d="M96 165h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M128 171v33.1"/><path class="rtile" d="M160 165h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M192 171v33.1"/><path class="rtile" d="M224 165h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M256 171v33.1"/><path class="rtile" d="M288 165h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M320 171v33.1"/><path class="rtile" d="M352 165h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M384 171v33.1"/><path class="rtile" d="M416 165h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M448 171v33.1"/></g><g class="tile-row"><path class="rtile t-warm" d="M0 132h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M32 138v33.1"/><path class="rtile" d="M64 132h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M96 138v33.1"/><path class="rtile" d="M128 132h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M160 138v33.1"/><path class="rtile" d="M192 132h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M224 138v33.1"/><path class="rtile" d="M256 132h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M288 138v33.1"/><path class="rtile" d="M320 132h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M352 138v33.1"/><path class="rtile t-warm" d="M384 132h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M416 138v33.1"/><path class="rtile" d="M448 132h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M480 138v33.1"/></g><g class="tile-row"><path class="rtile t-warm" d="M-32 99h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M0 105v33.1"/><path class="rtile" d="M32 99h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M64 105v33.1"/><path class="rtile" d="M96 99h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M128 105v33.1"/><path class="rtile" d="M160 99h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M192 105v33.1"/><path class="rtile" d="M224 99h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M256 105v33.1"/><path class="rtile" d="M288 99h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M320 105v33.1"/><path class="rtile" d="M352 99h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M384 105v33.1"/><path class="rtile" d="M416 99h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M448 105v33.1"/></g><g class="tile-row"><path class="rtile" d="M0 66h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M32 72v33.1"/><path class="rtile t-warm" d="M64 66h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M96 72v33.1"/><path class="rtile" d="M128 66h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M160 72v33.1"/><path class="rtile" d="M192 66h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M224 72v33.1"/><path class="rtile t-warm" d="M256 66h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M288 72v33.1"/><path class="rtile t-warm" d="M320 66h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M352 72v33.1"/><path class="rtile" d="M384 66h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M416 72v33.1"/><path class="rtile" d="M448 66h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M480 72v33.1"/></g><g class="tile-row"><path class="rtile" d="M-32 33h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M0 39v33.1"/><path class="rtile" d="M32 33h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M64 39v33.1"/><path class="rtile" d="M96 33h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M128 39v33.1"/><path class="rtile" d="M160 33h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M192 39v33.1"/><path class="rtile" d="M224 33h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M256 39v33.1"/><path class="rtile t-warm" d="M288 33h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M320 39v33.1"/><path class="rtile" d="M352 33h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M384 39v33.1"/><path class="rtile" d="M416 33h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M448 39v33.1"/></g><g class="tile-row"><path class="rtile" d="M0 0h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M32 6v33.1"/><path class="rtile" d="M64 0h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M96 6v33.1"/><path class="rtile t-warm" d="M128 0h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M160 6v33.1"/><path class="rtile" d="M192 0h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M224 6v33.1"/><path class="rtile" d="M256 0h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M288 6v33.1"/><path class="rtile" d="M320 0h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M352 6v33.1"/><path class="rtile t-warm" d="M384 0h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M416 6v33.1"/><path class="rtile" d="M448 0h64v25.3q0 20.7 -32 20.7q-32 0 -32 -20.7z"/><path class="tile-ridge" d="M480 6v33.1"/></g></svg></div>
+              <div class="tile-roof-copy">
+                <p class="tile-label">Address</p>
+                <p class="tile-mid">III Floor, Bridge Square Building, Balmatta, Mangaluru 575002</p>
+              </div>
+            </article>
+          </div>
+          <p class="note" role="note"><b>To confirm</b><span>Listings give the PIN as both 575002 and 575003.</span></p>
+        </div>
+      </section>
+
+      <section class="year" data-year aria-labelledby="year-title" data-tikku-say="That red needle? That&rsquo;s this month.">
+        <div class="wrap year-grid">
+          <div class="year-copy">
+            <p class="label">The year at a glance</p>
+            <h2 id="year-title" class="display-2" data-split><span class="ln"><span>April to March,</span></span><span class="ln"><span><em>mapped.</em></span></span></h2>
+            <p class="year-intro">Most tax and accounting work follows the Indian financial year. Hover or tap a row to find it on the dial.</p>
+            <ul class="legend">
+              <li class="legend-item" data-ring="gst" tabindex="0">
+                <span class="legend-swatch s-gst" aria-hidden="true"></span>
+                <span class="legend-text"><strong>GST returns</strong><span>Every month, or every quarter, depending on how the business is registered.</span></span>
+              </li>
+              <li class="legend-item" data-ring="advance" tabindex="0">
+                <span class="legend-swatch s-advance" aria-hidden="true"></span>
+                <span class="legend-text"><strong>Advance tax</strong><span>Paid in four instalments during the year it relates to.</span></span>
+              </li>
+              <li class="legend-item" data-ring="close" tabindex="0">
+                <span class="legend-swatch s-close" aria-hidden="true"></span>
+                <span class="legend-text"><strong>Closing the books</strong><span>The year ends on 31 March. Accounts are closed and reconciled in the weeks after.</span></span>
+              </li>
+              <li class="legend-item" data-ring="audit" tabindex="0">
+                <span class="legend-swatch s-audit" aria-hidden="true"></span>
+                <span class="legend-text"><strong>Audits</strong><span>Where an audit applies, it usually runs through the months after year-end.</span></span>
+              </li>
+              <li class="legend-item" data-ring="itr" tabindex="0">
+                <span class="legend-swatch s-itr" aria-hidden="true"></span>
+                <span class="legend-text"><strong>Income tax returns</strong><span>Due after year-end. Cases that need an audit have a later date.</span></span>
+              </li>
+            </ul>
+            <p class="year-fine">A general pattern only. Due dates are set by law, change by notification and differ from case to case.</p>
+            <p class="note" role="note"><b>To confirm</b><span>Check this calendar against current income tax and GST law before publishing.</span></p>
+          </div>
+          <div class="dial-wrap">
+            <svg class="dial" viewBox="0 0 600 600" role="img" aria-labelledby="dial-desc" data-dial>
+              <desc id="dial-desc">A circular calendar of the financial year from April to March, showing when GST returns, advance tax, closing the books, audits and income tax returns usually fall.</desc>
+              <line class="divider" x1="300" y1="216" x2="300" y2="42"/>
+              <text class="month-label" data-m="0" x="373.5" y="25.68">Apr</text>
+              <line class="divider" x1="342" y1="227.25" x2="429" y2="76.57"/>
+              <text class="month-label" data-m="1" x="500.82" y="99.18">May</text>
+              <line class="divider" x1="372.75" y1="258" x2="523.43" y2="171"/>
+              <text class="month-label" data-m="2" x="574.32" y="226.5">Jun</text>
+              <line class="divider" x1="384" y1="300" x2="558" y2="300"/>
+              <text class="month-label" data-m="3" x="574.32" y="373.5">Jul</text>
+              <line class="divider" x1="372.75" y1="342" x2="523.43" y2="429"/>
+              <text class="month-label" data-m="4" x="500.82" y="500.82">Aug</text>
+              <line class="divider" x1="342" y1="372.75" x2="429" y2="523.43"/>
+              <text class="month-label" data-m="5" x="373.5" y="574.32">Sep</text>
+              <line class="divider" x1="300" y1="384" x2="300" y2="558"/>
+              <text class="month-label" data-m="6" x="226.5" y="574.32">Oct</text>
+              <line class="divider" x1="258" y1="372.75" x2="171" y2="523.43"/>
+              <text class="month-label" data-m="7" x="99.18" y="500.82">Nov</text>
+              <line class="divider" x1="227.25" y1="342" x2="76.57" y2="429"/>
+              <text class="month-label" data-m="8" x="25.68" y="373.5">Dec</text>
+              <line class="divider" x1="216" y1="300" x2="42" y2="300"/>
+              <text class="month-label" data-m="9" x="25.68" y="226.5">Jan</text>
+              <line class="divider" x1="227.25" y1="258" x2="76.57" y2="171"/>
+              <text class="month-label" data-m="10" x="99.18" y="99.18">Feb</text>
+              <line class="divider" x1="258" y1="227.25" x2="171" y2="76.57"/>
+              <text class="month-label" data-m="11" x="226.5" y="25.68">Mar</text>
+              <circle class="track" cx="300" cy="300" r="240"/>
+              <circle class="track" cx="300" cy="300" r="206"/>
+              <circle class="track" cx="300" cy="300" r="172"/>
+              <circle class="track" cx="300" cy="300" r="138"/>
+              <circle class="track" cx="300" cy="300" r="104"/>
+              <g class="ring r-gst"><circle data-dot cx="362.12" cy="68.18" r="6"/><circle data-dot cx="469.71" cy="130.29" r="6"/><circle data-dot cx="531.82" cy="237.88" r="6"/><circle data-dot cx="531.82" cy="362.12" r="6"/><circle data-dot cx="469.71" cy="469.71" r="6"/><circle data-dot cx="362.12" cy="531.82" r="6"/><circle data-dot cx="237.88" cy="531.82" r="6"/><circle data-dot cx="130.29" cy="469.71" r="6"/><circle data-dot cx="68.18" cy="362.12" r="6"/><circle data-dot cx="68.18" cy="237.88" r="6"/><circle data-dot cx="130.29" cy="130.29" r="6"/><circle data-dot cx="237.88" cy="68.18" r="6"/></g>
+              <g class="ring r-advance"><circle data-dot cx="498.98" cy="246.68" r="9"/><circle data-dot cx="353.32" cy="498.98" r="9"/><circle data-dot cx="101.02" cy="353.32" r="9"/><circle data-dot cx="246.68" cy="101.02" r="9"/></g>
+              <g class="ring r-close"><path class="arc" pathLength="1" d="M314.99 128.65 A172 172 0 0 1 440.89 201.34"/></g>
+              <g class="ring r-audit"><path class="arc" pathLength="1" d="M379.15 186.96 A138 138 0 0 1 312.03 437.47"/></g>
+              <g class="ring r-itr"><path class="arc" pathLength="1" d="M403.6 309.06 A104 104 0 0 1 256.05 394.26"/></g>
+              <g class="needle" data-needle><line x1="300" y1="216" x2="300" y2="38"/><circle cx="300" cy="38" r="6"/></g>
+            </svg>
+            <div class="dial-center" aria-hidden="true"><span class="dial-month" data-dial-month>April</span><span class="dial-sub" data-dial-sub>Month 1 of 12</span></div>
           </div>
         </div>
       </section>
 
-      <section class="insights-preview section-pad" aria-labelledby="insights-title">
-        <div class="page-width insights-grid">
+      <section class="teaser" aria-labelledby="teaser-title">
+        <div class="wrap teaser-card" data-tilt>
           <div>
-            <p class="eyebrow"><span class="eyebrow-rule"></span> Notes &amp; explainers</p>
-            <h2 id="insights-title">Useful information,<br>when it is ready.</h2>
+            <p class="label">Notes</p>
+            <h2 id="teaser-title" class="display-3">Plain-language notes on tax and GST are being written.</h2>
           </div>
-          <div class="insights-empty">
-            <span class="empty-mark" aria-hidden="true"></span>
-            <p>No reviewed articles are available in this concept yet. Any future tax, GST or compliance content should be checked for accuracy and approved before release.</p>
-            <a class="text-link" href="insights.html">About the insights section <span aria-hidden="true">↗</span></a>
-          </div>
+          <a class="btn btn-ink" href="insights.html" data-magnetic data-cursor="Open"><span class="btn-fill" aria-hidden="true"></span><span class="roll" data-text="What they will cover"><span>What they will cover</span></span></a>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="page-width footer-main">
-        <div class="footer-brand">
-          <a class="wordmark wordmark-footer" href="index.html">
-            <span class="wordmark-name">Pramod Krishna <span>&amp; Co LLP</span></span>
-            <span class="wordmark-description">Chartered Accountants</span>
-          </a>
-          <p>Bridge Square, Balmatta<br>Mangaluru, Karnataka, India <span class="provisional">(location for confirmation)</span></p>
+    <footer class="footer" data-footer data-tikku-say="That&rsquo;s the bottom. Want the number? Tap me.">
+      <div class="footer-inner wrap">
+        <div class="footer-top">
+          <p class="footer-call">Questions about a return, a notice or your books?<a href="tel:+919480151586" data-cursor="Call">94801&nbsp;51586</a></p>
+          <a class="to-top" href="#main" data-to-top data-magnetic aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
         </div>
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="about.html">About</a><a href="services.html">Services</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a>
-        </nav>
-        <div class="footer-note">
-          <p>This is an independent website concept and is not an official or approved firm website.</p>
-          <p>Any published information would be general in nature and not individualized professional advice, subject to the firm’s review.</p>
+        <div class="footer-grid">
+          <div>
+            <h2 class="footer-head">Office</h2>
+            <p>III Floor, Bridge Square Building<br>Near Juice Junction, Balmatta<br>Mangaluru, Karnataka 575002</p>
+          </div>
+          <div>
+            <h2 class="footer-head">Hours</h2>
+            <p>Monday to Saturday<br>9:30 am to 7:00 pm<br>Closed on Sunday</p>
+          </div>
+          <div>
+            <h2 class="footer-head">Contact</h2>
+            <p><a href="tel:+919480151586">94801&nbsp;51586</a><br><a href="mailto:capramod123@gmail.com">capramod123@gmail.com</a><br><a href="https://www.google.com/maps/search/?api=1&amp;query=Pramod+Krishna+%26+Co+LLP%2C+Bridge+Square%2C+Balmatta%2C+Mangaluru" target="_blank" rel="noopener">Directions on Google Maps</a></p>
+          </div>
+          <nav aria-label="Footer">
+            <h2 class="footer-head">Pages</h2>
+            <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a>
+          </nav>
+        </div>
+        <p class="footer-name" translate="no" aria-hidden="true" data-footer-name>Pramod Krishna &amp; Co</p>
+        <div class="footer-base">
+          <span>&copy; <span data-year-now>2026</span> <span translate="no">Pramod Krishna &amp; Co LLP</span>, Chartered Accountants</span>
+          <span>Independent concept for the firm&rsquo;s review. Not the firm&rsquo;s official website, and not advice on any individual matter.</span>
         </div>
       </div>
-      <div class="page-width footer-bottom"><span>© <span class="year">2026</span> Pramod Krishna &amp; Co LLP</span><span>Content and professional review required before launch</span></div>
     </footer>
   </body>
 </html>

@@ -2,85 +2,403 @@
 <html lang="en-IN">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="robots" content="noindex, nofollow">
-    <meta name="theme-color" content="#f8f6f1">
-    <meta name="description" content="A draft catalogue of potential service areas for review by Pramod Krishna &amp; Co LLP.">
+    <meta name="theme-color" content="#07140f">
+    <meta name="color-scheme" content="light">
+    <title>Services | Pramod Krishna &amp; Co LLP, Mangaluru</title>
+    <meta name="description" content="Income tax, GST, audit, accounting, financial reporting and advisory from Pramod Krishna &amp; Co LLP in Balmatta, Mangaluru: what each involves and what to bring.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_IN">
-    <meta property="og:title" content="Proposed services | Pramod Krishna &amp; Co LLP">
-    <meta property="og:description" content="Potential service areas shown as unconfirmed draft content for firm review.">
-    <title>Proposed services | Pramod Krishna &amp; Co LLP</title>
+    <meta property="og:site_name" content="Pramod Krishna &amp; Co LLP (website concept)">
+    <meta property="og:title" content="Services | Pramod Krishna &amp; Co LLP, Mangaluru">
+    <meta property="og:description" content="Income tax, GST, audit, accounting, financial reporting and advisory from Pramod Krishna &amp; Co LLP in Balmatta, Mangaluru: what each involves and what to bring.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="fonts/bricolage-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
+    <script>
+      (function (d, w) {
+        var r = d.documentElement;
+        r.classList.add("js");
+        if (!(w.matchMedia && w.matchMedia("(prefers-reduced-motion: reduce)").matches)) r.classList.add("fx");
+        try {
+          if (localStorage.getItem("pkc-review-notes") === "on") r.dataset.notes = "on";
+          if (sessionStorage.getItem("pkc-curtain") === "1") r.classList.add("is-arriving");
+        } catch (e) {}
+        setTimeout(function () {
+          if (!w.__pkcReady) r.classList.remove("fx", "is-arriving");
+        }, 2500);
+      })(document, window);
+    </script>
+    <script src="vendor/gsap.min.js" defer></script>
+    <script src="vendor/ScrollTrigger.min.js" defer></script>
+    <script src="vendor/lenis.min.js" defer></script>
     <script src="site-effects.js" defer></script>
   </head>
   <body>
-    <div class="reading-progress" aria-hidden="true"><span></span></div>
     <a class="skip-link" href="#main">Skip to content</a>
-    <div class="concept-notice">Independent website concept · Not authorized or approved by the firm</div>
-    <header class="site-header">
-      <a class="wordmark" href="index.html" aria-label="Pramod Krishna and Company LLP, home"><span class="wordmark-name">Pramod Krishna <span>&amp; Co LLP</span></span><span class="wordmark-description">Chartered Accountants</span></a>
-      <nav class="desktop-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html" aria-current="page">Services</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a></nav>
-      <a class="header-contact" href="contact.html">Contact the office <span aria-hidden="true">↗</span></a>
-      <details class="mobile-nav"><summary aria-label="Toggle navigation menu"><span></span><span></span></summary><nav class="mobile-menu-list" aria-label="Mobile navigation"><p class="mobile-menu-heading">Navigate</p><a href="index.html"><span class="menu-number">01</span><span>Home</span><span class="menu-arrow" aria-hidden="true">↗</span></a><a href="about.html"><span class="menu-number">02</span><span>About</span><span class="menu-arrow" aria-hidden="true">↗</span></a><a href="services.html" aria-current="page"><span class="menu-number">03</span><span>Services</span><span class="menu-arrow" aria-hidden="true">↗</span></a><a href="insights.html"><span class="menu-number">04</span><span>Insights</span><span class="menu-arrow" aria-hidden="true">↗</span></a><a href="contact.html"><span class="menu-number">05</span><span>Contact</span><span class="menu-arrow" aria-hidden="true">↗</span></a></nav></details>
+    <div class="curtain" aria-hidden="true"><span class="curtain-coin"></span><span class="curtain-mark">PK&amp;Co</span></div>
+    <div class="cursor is-hidden" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"><span class="cursor-label"></span></span></div>
+
+    <aside class="banner" aria-label="Website status">
+      <p><strong>Independent concept.</strong> <span class="banner-long">Not authorised or approved by the firm.</span><span class="banner-short">Not approved by the firm.</span></p>
+      <button class="notes-toggle" type="button" aria-pressed="false" data-notes-toggle hidden>
+        <span class="notes-toggle-track" aria-hidden="true"></span>
+        <span class="notes-toggle-label">Review notes</span>
+      </button>
+    </aside>
+
+    <header class="header" data-header>
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">PK</span>
+          <span class="brand-text"><span class="brand-name" translate="no">Pramod Krishna &amp; Co LLP</span><span class="brand-role">Chartered Accountants</span></span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          <a href="about.html"><span class="roll" data-text="About"><span>About</span></span></a>
+          <a href="services.html" aria-current="page"><span class="roll" data-text="Services"><span>Services</span></span></a>
+          <a href="insights.html"><span class="roll" data-text="Insights"><span>Insights</span></span></a>
+          <a href="contact.html"><span class="roll" data-text="Contact"><span>Contact</span></span></a>
+        </nav>
+        <div class="header-end">
+          <span class="status status-pill" data-status><span class="status-dot" aria-hidden="true"></span><span class="status-text">Mon–Sat, 9:30–7:00</span></span>
+          <a class="pill" href="tel:+919480151586" data-magnetic data-cursor="Call"><span class="roll" data-text="Call the office"><span>Call the office</span></span></a>
+        </div>
+        <details class="menu" data-menu>
+          <summary aria-label="Menu"><span class="menu-icon" aria-hidden="true"><span></span><span></span></span></summary>
+          <div class="menu-panel">
+            <nav aria-label="Main">
+              <a href="index.html"><span class="menu-index">01</span><span class="menu-word">Home</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="about.html"><span class="menu-index">02</span><span class="menu-word">About</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="services.html" aria-current="page"><span class="menu-index">03</span><span class="menu-word">Services</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="insights.html"><span class="menu-index">04</span><span class="menu-word">Insights</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="contact.html"><span class="menu-index">05</span><span class="menu-word">Contact</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </nav>
+            <div class="menu-foot">
+              <p class="status" data-status><span class="status-dot" aria-hidden="true"></span><span class="status-text">Mon–Sat, 9:30–7:00</span></p>
+              <a class="menu-call" href="tel:+919480151586"><svg class="icon-phone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>94801&nbsp;51586</span></a>
+              <p>III Floor, Bridge Square, Balmatta, Mangaluru</p>
+            </div>
+          </div>
+        </details>
+      </div>
     </header>
 
+    <div class="tikku" data-tikku>
+      <div class="tikku-bubble" data-tikku-bubble aria-live="polite"></div>
+      <div class="tikku-panel" id="tikku-panel" role="dialog" aria-label="Quick help from Tikku" data-tikku-panel hidden>
+        <div class="tp-head">
+          <p class="tp-hello" data-tikku-hello>Hi, I&rsquo;m Tikku.</p>
+          <button class="tp-close" type="button" aria-label="Close quick help" data-tikku-close><span aria-hidden="true"></span></button>
+        </div>
+        <p class="status tp-status" data-status><span class="status-dot" aria-hidden="true"></span><span class="status-text">Mon–Sat, 9:30 am to 7:00 pm</span></p>
+        <ul class="tp-actions">
+          <li><a href="tel:+919480151586" data-cursor="Call"><svg class="icon-phone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>Call 94801&nbsp;51586</span></a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Pramod+Krishna+%26+Co+LLP%2C+Bridge+Square%2C+Balmatta%2C+Mangaluru" target="_blank" rel="noopener" data-cursor="Map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span>Get directions</span></a></li>
+          <li>
+            <button type="button" aria-expanded="false" aria-controls="tp-hours" data-accordion><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Office hours</span><span class="acc-chev" aria-hidden="true"></span></button>
+            <div class="acc-body" id="tp-hours" hidden>
+              <table class="hours hours-mini" data-hours>
+                <caption class="visually-hidden">Office hours</caption>
+                <tbody>
+                  <tr data-day="1"><th scope="row">Monday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="2"><th scope="row">Tuesday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="3"><th scope="row">Wednesday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="4"><th scope="row">Thursday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="5"><th scope="row">Friday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="6"><th scope="row">Saturday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+          <li><a href="services.html#taxation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7M9 8h3"/></svg><span>What should I bring?</span></a></li>
+        </ul>
+        <button class="tp-hide" type="button" data-tikku-hide>Hide Tikku</button>
+      </div>
+      <button class="tikku-btn" type="button" aria-expanded="false" aria-controls="tikku-panel" aria-label="Tikku: quick help with hours, directions and calling the office" data-tikku-btn data-cursor="Hi!">
+        <span class="tikku-body" data-tikku-body>
+          <svg class="tk" viewBox="0 0 120 140" aria-hidden="true" focusable="false">
+            <defs>
+              <radialGradient id="tkBody" cx="36%" cy="30%" r="78%">
+                <stop offset="0" stop-color="#FFE7A8"/>
+                <stop offset=".5" stop-color="#F6BC45"/>
+                <stop offset="1" stop-color="#DB8E1C"/>
+              </radialGradient>
+            </defs>
+            <ellipse class="tk-shadow" cx="60" cy="133" rx="25" ry="4.5"/>
+            <g class="tk-all">
+              <g class="tk-feet"><ellipse cx="46" cy="124" rx="9.5" ry="5.5"/><ellipse cx="74" cy="124" rx="9.5" ry="5.5"/></g>
+              <g class="tk-arm tk-arm-l"><path d="M20 78c-9 3-13 10-13 18"/></g>
+              <g class="tk-arm tk-arm-r"><path d="M100 76c9-3 14-10 15-19"/></g>
+              <g class="tk-antenna"><path class="tk-stalk" d="M60 32V17"/><path class="tk-tick" d="M49 10l7 7 13-14"/></g>
+              <circle class="tk-body" cx="60" cy="76" r="44"/>
+              <circle class="tk-rim" cx="60" cy="76" r="36"/>
+              <g class="tk-face">
+                <g class="tk-eye tk-eye-l"><ellipse cx="45" cy="70" rx="9.5" ry="11"/><circle class="tk-pupil" cx="45" cy="71" r="4.6"/><circle class="tk-glint" cx="47" cy="68.5" r="1.5"/></g>
+                <g class="tk-eye tk-eye-r"><ellipse cx="75" cy="70" rx="9.5" ry="11"/><circle class="tk-pupil" cx="75" cy="71" r="4.6"/><circle class="tk-glint" cx="77" cy="68.5" r="1.5"/></g>
+                <ellipse class="tk-cheek" cx="34" cy="86" rx="5.5" ry="3.2"/>
+                <ellipse class="tk-cheek" cx="86" cy="86" rx="5.5" ry="3.2"/>
+                <path class="tk-mouth tk-smile" d="M51 88c5 7 13 7 18 0"/>
+                <ellipse class="tk-mouth tk-oh" cx="60" cy="91" rx="4.5" ry="5.5"/>
+                <path class="tk-mouth tk-sleep" d="M54 90h12"/>
+              </g>
+              <g class="tk-zzz"><text x="92" y="30">z</text><text x="100" y="18">z</text><text x="106" y="8">z</text></g>
+            </g>
+          </svg>
+        </span>
+      </button>
+      <button class="tikku-peek" type="button" aria-label="Show Tikku" data-tikku-show hidden><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></button>
+    </div>
+
     <main id="main">
-      <section class="page-hero page-width">
-        <p class="eyebrow"><span class="eyebrow-rule"></span> Services / draft catalogue</p>
-        <h1>Work shaped around<br><em>the detail that matters.</em></h1>
-        <div class="page-hero-bottom"><p>The areas below are initial suggestions only. They are not a confirmed or complete service list and must be approved by the firm before use.</p><span class="page-hero-index">02 / SCOPE</span></div>
-      </section>
-
-      <section class="service-index-section section-pad">
-        <div class="page-width">
-          <div class="review-banner"><span class="review-dot" aria-hidden="true"></span><p><strong>Firm review required.</strong> Proposed service areas and descriptions are draft concept copy. Remove or revise any area the firm does not offer.</p></div>
-          <nav class="service-index" aria-label="Proposed service areas">
-            <a href="#taxation"><span>01</span>Taxation &amp; tax advisory<span aria-hidden="true">↘</span></a>
-            <a href="#gst"><span>02</span>GST &amp; compliance<span aria-hidden="true">↘</span></a>
-            <a href="#audit"><span>03</span>Audit &amp; assurance<span aria-hidden="true">↘</span></a>
-            <a href="#accounting"><span>04</span>Accounting &amp; bookkeeping<span aria-hidden="true">↘</span></a>
-            <a href="#reporting"><span>05</span>Financial reporting<span aria-hidden="true">↘</span></a>
-            <a href="#advisory"><span>06</span>Business &amp; financial advisory<span aria-hidden="true">↘</span></a>
-          </nav>
+      <section class="phero" data-phero aria-labelledby="page-title" data-tikku-say="Pick a service on the left. I&rsquo;ll tick them off as you read.">
+        <div class="aurora aurora-soft" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+        <div class="grid-glow" aria-hidden="true"></div>
+        <div class="wrap phero-inner">
+          <p class="eyebrow-pill" data-hero-fade><span class="pill-coin" aria-hidden="true">&#8377;</span>Services</p>
+          <h1 id="page-title" class="phero-title" data-split><span class="ln"><span>What we handle,</span></span><span class="ln"><span><em>in plain terms.</em></span></span></h1>
+          <div class="phero-foot">
+            <p class="phero-lede" data-hero-fade>Six areas of work. For each one: who it is usually for, what the work involves, and what to bring to the first meeting.</p>
+            <p class="note" role="note"><b>To confirm</b><span>The service list and every description here are drafts. Remove or rewrite anything the firm does not offer.</span></p>
+          </div>
         </div>
       </section>
 
-      <section class="service-detail-section">
-        <div class="page-width">
-          <article class="service-detail" id="taxation">
-            <span class="service-detail-number">01</span><div><p class="eyebrow"><span class="eyebrow-rule"></span> Proposed area</p><h2>Taxation &amp; tax advisory</h2><p>Draft scope for review: support with tax-related responsibilities and questions, shaped by the applicable requirements and the client’s circumstances.</p></div>
-          </article>
-          <article class="service-detail" id="gst">
-            <span class="service-detail-number">02</span><div><p class="eyebrow"><span class="eyebrow-rule"></span> Proposed area</p><h2>GST &amp; compliance</h2><p>Draft scope for review: assistance with GST-related records, filings and compliance processes, subject to confirmation of the firm’s current service offering.</p></div>
-          </article>
-          <article class="service-detail" id="audit">
-            <span class="service-detail-number">03</span><div><p class="eyebrow"><span class="eyebrow-rule"></span> Proposed area</p><h2>Audit &amp; assurance</h2><p>Draft scope for review: audit or assurance work within the firm’s applicable professional appointments and areas of practice.</p></div>
-          </article>
-          <article class="service-detail" id="accounting">
-            <span class="service-detail-number">04</span><div><p class="eyebrow"><span class="eyebrow-rule"></span> Proposed area</p><h2>Accounting &amp; bookkeeping</h2><p>Draft scope for review: maintaining or reviewing accounting records and related processes, according to an agreed scope of work.</p></div>
-          </article>
-          <article class="service-detail" id="reporting">
-            <span class="service-detail-number">05</span><div><p class="eyebrow"><span class="eyebrow-rule"></span> Proposed area</p><h2>Financial reporting</h2><p>Draft scope for review: preparation or review of financial information and reports, based on confirmed client needs and engagement terms.</p></div>
-          </article>
-          <article class="service-detail" id="advisory">
-            <span class="service-detail-number">06</span><div><p class="eyebrow"><span class="eyebrow-rule"></span> Proposed area</p><h2>Business &amp; financial advisory</h2><p>Draft scope for review: professional input on business or financial matters, limited to the firm’s approved services and agreed engagement scope.</p></div>
-          </article>
-        </div>
-      </section>
+      <div class="svc-layout wrap">
+        <nav class="rail" aria-label="Services on this page" data-spy>
+          <p class="rail-head">On this page</p>
+          <ol>
+            <li><a href="#taxation"><span class="rail-num">01</span><span>Income tax</span><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></a></li>
+            <li><a href="#gst"><span class="rail-num">02</span><span>GST</span><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></a></li>
+            <li><a href="#audit"><span class="rail-num">03</span><span>Audit</span><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></a></li>
+            <li><a href="#accounting"><span class="rail-num">04</span><span>Accounting</span><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></a></li>
+            <li><a href="#reporting"><span class="rail-num">05</span><span>Reporting</span><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></a></li>
+            <li><a href="#advisory"><span class="rail-num">06</span><span>Advisory</span><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></a></li>
+          </ol>
+          <div class="rail-progress" aria-hidden="true"><span data-spy-progress></span></div>
+        </nav>
+        <div class="svc-stream">
+          <section class="svc t-forest" id="taxation" aria-labelledby="taxation-title" data-spy-section>
+            <div class="svc-head">
+              <span class="svc-num">01</span>
+              <svg class="svc-icon svc-icon-lg" viewBox="0 0 64 64" aria-hidden="true" data-draw><path d="M14 6h28l10 10v42H14z"/><path d="M42 6v10h10"/><path d="M24 26h16M24 33h16M31 26c6 0 6 7 0 7h-5l12 12"/></svg>
+            </div>
+            <h2 id="taxation-title" class="svc-title" data-split><span class="ln"><span>Taxation &amp; tax advisory</span></span></h2>
+            <p class="svc-who" data-reveal>For anyone with income tax to work out, file or answer questions about: salaried employees with more than one income, professionals, firms and companies.</p>
+            <div class="svc-cols">
+              <div class="svc-card" data-reveal>
+                <h3 class="mini-head">What the work involves</h3>
+                <ul class="checks">
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Income tax returns and the computation behind each one</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Advance tax estimates during the year</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Replies to notices, and representation in assessments</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Planning the tax on salary, property, capital gains and business income</span></li>
+                </ul>
+              </div>
+              <div class="svc-card bring" data-reveal>
+                <h3 class="mini-head">What to bring <span class="mini-hint">tap to tick</span></h3>
+                <ul class="chips" data-checklist>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>PAN and Aadhaar</span></button></li>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Form 16 from each employer</span></button></li>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Interest certificates from your banks</span></button></li>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Capital gains statements from your broker</span></button></li>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Rent receipts and home-loan certificate</span></button></li>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Last year&rsquo;s return, if filed elsewhere</span></button></li>
+                </ul>
+              </div>
+            </div>
+          </section>
 
-      <section class="service-cta section-pad">
-        <div class="page-width service-cta-inner"><p class="eyebrow eyebrow-light"><span class="eyebrow-rule"></span> Before publication</p><h2>Confirm the scope.<br>Then make it clear.</h2><a class="button button-light" href="contact.html">Review contact details <span aria-hidden="true">↗</span></a></div>
+          <section class="svc t-saffron" id="gst" aria-labelledby="gst-title" data-spy-section>
+            <div class="svc-head">
+              <span class="svc-num">02</span>
+              <svg class="svc-icon svc-icon-lg" viewBox="0 0 64 64" aria-hidden="true" data-draw><rect x="8" y="12" width="22" height="30" rx="2"/><rect x="34" y="22" width="22" height="30" rx="2"/><path d="M13 20h12M13 26h12M39 30h12M39 36h12"/><path d="M24 50c6 4 14 4 20-2M44 48v-5h-5"/></svg>
+            </div>
+            <h2 id="gst-title" class="svc-title" data-split><span class="ln"><span>GST &amp; compliance</span></span></h2>
+            <p class="svc-who" data-reveal>For businesses registered under GST, and for those working out whether they need to be.</p>
+            <div class="svc-cols">
+              <div class="svc-card" data-reveal>
+                <h3 class="mini-head">What the work involves</h3>
+                <ul class="checks">
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Registration, amendments and cancellation</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Monthly or quarterly returns</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Reconciling input tax credit with supplier filings</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Annual returns, and replies to department queries</span></li>
+                </ul>
+              </div>
+              <div class="svc-card bring" data-reveal>
+                <h3 class="mini-head">What to bring <span class="mini-hint">tap to tick</span></h3>
+                <ul class="chips" data-checklist>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Sales and purchase invoices, or registers</span></button></li>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Bank statements for the period</span></button></li>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>E-way bills, if you raise them</span></button></li>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Copies of returns already filed</span></button></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="svc t-mint" id="audit" aria-labelledby="audit-title" data-spy-section>
+            <div class="svc-head">
+              <span class="svc-num">03</span>
+              <svg class="svc-icon svc-icon-lg" viewBox="0 0 64 64" aria-hidden="true" data-draw><circle cx="27" cy="27" r="16"/><path d="M39 39l15 15"/><path d="M19 27.5c2 1 3.4 2.6 4.6 4.8 2.5-5.2 6-9 10.6-11.8"/></svg>
+            </div>
+            <h2 id="audit-title" class="svc-title" data-split><span class="ln"><span>Audit &amp; assurance</span></span></h2>
+            <p class="svc-who" data-reveal>For companies and LLPs that need an audit by law, businesses that cross the tax-audit threshold, and owners who want an independent check.</p>
+            <div class="svc-cols">
+              <div class="svc-card" data-reveal>
+                <h3 class="mini-head">What the work involves</h3>
+                <ul class="checks">
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Statutory audits of companies and LLPs</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Tax audits, where turnover or receipts cross the limit</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Internal audits and reviews of specific processes</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Certificates that banks and regulators ask for</span></li>
+                </ul>
+              </div>
+              <div class="svc-card bring" data-reveal>
+                <h3 class="mini-head">What to bring <span class="mini-hint">tap to tick</span></h3>
+                <ul class="chips" data-checklist>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Books of account and trial balance</span></button></li>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Bank statements and balance confirmations</span></button></li>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Fixed asset register</span></button></li>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Last year&rsquo;s audited accounts</span></button></li>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Minutes and statutory registers (companies)</span></button></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="svc t-sky" id="accounting" aria-labelledby="accounting-title" data-spy-section>
+            <div class="svc-head">
+              <span class="svc-num">04</span>
+              <svg class="svc-icon svc-icon-lg" viewBox="0 0 64 64" aria-hidden="true" data-draw><path d="M10 12h20c3 0 4 2 4 4v38c0-2-1-4-4-4H10z"/><path d="M54 12H38c-3 0-4 2-4 4v38c0-2 1-4 4-4h16z"/><path d="M15 22h12M15 29h12M15 36h8M40 22h9M40 29h9M40 36h9"/></svg>
+            </div>
+            <h2 id="accounting-title" class="svc-title" data-split><span class="ln"><span>Accounting &amp; bookkeeping</span></span></h2>
+            <p class="svc-who" data-reveal>For businesses that want their books kept, or checked, by someone outside the business.</p>
+            <div class="svc-cols">
+              <div class="svc-card" data-reveal>
+                <h3 class="mini-head">What the work involves</h3>
+                <ul class="checks">
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Day-to-day bookkeeping</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Bank, party and ledger reconciliations</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Month-end and year-end closing</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Fixed asset and other registers</span></li>
+                </ul>
+              </div>
+              <div class="svc-card bring" data-reveal>
+                <h3 class="mini-head">What to bring <span class="mini-hint">tap to tick</span></h3>
+                <ul class="chips" data-checklist>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Bank statements</span></button></li>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Sales and purchase invoices</span></button></li>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Expense bills and vouchers</span></button></li>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Salary and payroll details</span></button></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="svc t-coral" id="reporting" aria-labelledby="reporting-title" data-spy-section>
+            <div class="svc-head">
+              <span class="svc-num">05</span>
+              <svg class="svc-icon svc-icon-lg" viewBox="0 0 64 64" aria-hidden="true" data-draw><path d="M8 54h48"/><path d="M14 54V36h8v18M28 54V24h8v30M42 54V14h8v40"/><path d="M12 28l12-10 10 6 16-14"/></svg>
+            </div>
+            <h2 id="reporting-title" class="svc-title" data-split><span class="ln"><span>Financial reporting</span></span></h2>
+            <p class="svc-who" data-reveal>For anyone who has to show their numbers to someone else: a bank, a regulator, a partner or an investor.</p>
+            <div class="svc-cols">
+              <div class="svc-card" data-reveal>
+                <h3 class="mini-head">What the work involves</h3>
+                <ul class="checks">
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Annual financial statements with notes and schedules</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Projections and CMA data for bank loans</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Periodic reports for owners and management</span></li>
+                </ul>
+              </div>
+              <div class="svc-card bring" data-reveal>
+                <h3 class="mini-head">What to bring <span class="mini-hint">tap to tick</span></h3>
+                <ul class="chips" data-checklist>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Trial balance or complete books</span></button></li>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Loan sanction letters and terms</span></button></li>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Previous financial statements</span></button></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="svc t-ink" id="advisory" aria-labelledby="advisory-title" data-spy-section>
+            <div class="svc-head">
+              <span class="svc-num">06</span>
+              <svg class="svc-icon svc-icon-lg" viewBox="0 0 64 64" aria-hidden="true" data-draw><circle cx="32" cy="32" r="22"/><path d="M40 24l-5 11-11 5 5-11z"/><path d="M32 6v5M32 53v5M6 32h5M53 32h5"/></svg>
+            </div>
+            <h2 id="advisory-title" class="svc-title" data-split><span class="ln"><span>Business &amp; financial advisory</span></span></h2>
+            <p class="svc-who" data-reveal>For decisions with a tax or accounting side, made before the paperwork rather than after it.</p>
+            <div class="svc-cols">
+              <div class="svc-card" data-reveal>
+                <h3 class="mini-head">What the work involves</h3>
+                <ul class="checks">
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Choosing a structure: proprietorship, partnership, LLP or company</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>Registrations when a business starts or changes</span></li>
+                  <li><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg><span>The tax effect of a sale, purchase or restructuring</span></li>
+                </ul>
+              </div>
+              <div class="svc-card bring" data-reveal>
+                <h3 class="mini-head">What to bring <span class="mini-hint">tap to tick</span></h3>
+                <ul class="chips" data-checklist>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>A short note of what you are planning</span></button></li>
+                  <li><button type="button" aria-pressed="false" data-check><span class="check-box"><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></span><span>Existing PAN, GST and incorporation documents</span></button></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <section class="cta" aria-labelledby="cta-title" data-tikku-say="Not sure? Just call. I would.">
+        <div class="aurora aurora-soft" aria-hidden="true"><span class="blob b2"></span><span class="blob b3"></span></div>
+        <div class="wrap cta-inner">
+          <h2 id="cta-title" class="display-1" data-split><span class="ln"><span>Not sure where</span></span><span class="ln"><span><em>your matter fits?</em></span></span></h2>
+          <div class="cta-side">
+            <p>Most matters touch more than one area. Bring what you have, and start from there.</p>
+            <div class="cta-actions">
+              <a class="btn btn-saffron" href="tel:+919480151586" data-magnetic data-cursor="Call"><span class="btn-fill" aria-hidden="true"></span><svg class="icon-phone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="roll" data-text="Call 94801 51586"><span>Call 94801&nbsp;51586</span></span></a>
+              <a class="btn btn-glass" href="contact.html" data-magnetic data-cursor="Open"><span class="btn-fill" aria-hidden="true"></span><span class="roll" data-text="Visit the office"><span>Visit the office</span></span></a>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="page-width footer-main">
-        <div class="footer-brand"><a class="wordmark wordmark-footer" href="index.html"><span class="wordmark-name">Pramod Krishna <span>&amp; Co LLP</span></span><span class="wordmark-description">Chartered Accountants</span></a><p>Bridge Square, Balmatta<br>Mangaluru, Karnataka, India <span class="provisional">(location for confirmation)</span></p></div>
-        <nav class="footer-nav" aria-label="Footer navigation"><a href="about.html">About</a><a href="services.html">Services</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a></nav>
-        <div class="footer-note"><p>This is an independent website concept and is not an official or approved firm website.</p><p>Any published information would be general in nature and not individualized professional advice, subject to the firm’s review.</p></div>
+    <footer class="footer" data-footer data-tikku-say="That&rsquo;s the bottom. Want the number? Tap me.">
+      <div class="footer-inner wrap">
+        <div class="footer-top">
+          <p class="footer-call">Questions about a return, a notice or your books?<a href="tel:+919480151586" data-cursor="Call">94801&nbsp;51586</a></p>
+          <a class="to-top" href="#main" data-to-top data-magnetic aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+        </div>
+        <div class="footer-grid">
+          <div>
+            <h2 class="footer-head">Office</h2>
+            <p>III Floor, Bridge Square Building<br>Near Juice Junction, Balmatta<br>Mangaluru, Karnataka 575002</p>
+          </div>
+          <div>
+            <h2 class="footer-head">Hours</h2>
+            <p>Monday to Saturday<br>9:30 am to 7:00 pm<br>Closed on Sunday</p>
+          </div>
+          <div>
+            <h2 class="footer-head">Contact</h2>
+            <p><a href="tel:+919480151586">94801&nbsp;51586</a><br><a href="mailto:capramod123@gmail.com">capramod123@gmail.com</a><br><a href="https://www.google.com/maps/search/?api=1&amp;query=Pramod+Krishna+%26+Co+LLP%2C+Bridge+Square%2C+Balmatta%2C+Mangaluru" target="_blank" rel="noopener">Directions on Google Maps</a></p>
+          </div>
+          <nav aria-label="Footer">
+            <h2 class="footer-head">Pages</h2>
+            <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a>
+          </nav>
+        </div>
+        <p class="footer-name" translate="no" aria-hidden="true" data-footer-name>Pramod Krishna &amp; Co</p>
+        <div class="footer-base">
+          <span>&copy; <span data-year-now>2026</span> <span translate="no">Pramod Krishna &amp; Co LLP</span>, Chartered Accountants</span>
+          <span>Independent concept for the firm&rsquo;s review. Not the firm&rsquo;s official website, and not advice on any individual matter.</span>
+        </div>
       </div>
-      <div class="page-width footer-bottom"><span>© <span class="year">2026</span> Pramod Krishna &amp; Co LLP</span><span>Content and professional review required before launch</span></div>
     </footer>
   </body>
 </html>

@@ -2,106 +2,250 @@
 <html lang="en-IN">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="robots" content="noindex, nofollow">
-    <meta name="theme-color" content="#f8f6f1">
-    <meta name="description" content="A prospective profile page concept for Pramod Krishna &amp; Co LLP, Chartered Accountants in Mangaluru.">
+    <meta name="theme-color" content="#07140f">
+    <meta name="color-scheme" content="light">
+    <title>About | Pramod Krishna &amp; Co LLP, Mangaluru</title>
+    <meta name="description" content="Pramod Krishna &amp; Co LLP is a chartered accountancy practice at Bridge Square, Balmatta, Mangaluru, working in audit, taxation and related advisory since 2017.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_IN">
-    <meta property="og:title" content="About | Pramod Krishna &amp; Co LLP">
-    <meta property="og:description" content="A prospective profile page concept for a Chartered Accountancy firm in Mangaluru.">
-    <title>About | Pramod Krishna &amp; Co LLP</title>
+    <meta property="og:site_name" content="Pramod Krishna &amp; Co LLP (website concept)">
+    <meta property="og:title" content="About | Pramod Krishna &amp; Co LLP, Mangaluru">
+    <meta property="og:description" content="Pramod Krishna &amp; Co LLP is a chartered accountancy practice at Bridge Square, Balmatta, Mangaluru, working in audit, taxation and related advisory since 2017.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="fonts/bricolage-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/geist-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
+    <script>
+      (function (d, w) {
+        var r = d.documentElement;
+        r.classList.add("js");
+        if (!(w.matchMedia && w.matchMedia("(prefers-reduced-motion: reduce)").matches)) r.classList.add("fx");
+        try {
+          if (localStorage.getItem("pkc-review-notes") === "on") r.dataset.notes = "on";
+          if (sessionStorage.getItem("pkc-curtain") === "1") r.classList.add("is-arriving");
+        } catch (e) {}
+        setTimeout(function () {
+          if (!w.__pkcReady) r.classList.remove("fx", "is-arriving");
+        }, 2500);
+      })(document, window);
+    </script>
+    <script src="vendor/gsap.min.js" defer></script>
+    <script src="vendor/ScrollTrigger.min.js" defer></script>
+    <script src="vendor/lenis.min.js" defer></script>
     <script src="site-effects.js" defer></script>
   </head>
   <body>
-    <div class="reading-progress" aria-hidden="true"><span></span></div>
     <a class="skip-link" href="#main">Skip to content</a>
-    <div class="concept-notice">Independent website concept · Not authorized or approved by the firm</div>
-    <header class="site-header">
-      <a class="wordmark" href="index.html" aria-label="Pramod Krishna and Company LLP, home">
-        <span class="wordmark-name">Pramod Krishna <span>&amp; Co LLP</span></span>
-        <span class="wordmark-description">Chartered Accountants</span>
-      </a>
-      <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a><a href="about.html" aria-current="page">About</a><a href="services.html">Services</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a>
-      </nav>
-      <a class="header-contact" href="contact.html">Contact the office <span aria-hidden="true">↗</span></a>
-      <details class="mobile-nav">
-        <summary aria-label="Toggle navigation menu"><span></span><span></span></summary>
-        <nav class="mobile-menu-list" aria-label="Mobile navigation">
-          <p class="mobile-menu-heading">Navigate</p>
-          <a href="index.html"><span class="menu-number">01</span><span>Home</span><span class="menu-arrow" aria-hidden="true">↗</span></a>
-          <a href="about.html" aria-current="page"><span class="menu-number">02</span><span>About</span><span class="menu-arrow" aria-hidden="true">↗</span></a>
-          <a href="services.html"><span class="menu-number">03</span><span>Services</span><span class="menu-arrow" aria-hidden="true">↗</span></a>
-          <a href="insights.html"><span class="menu-number">04</span><span>Insights</span><span class="menu-arrow" aria-hidden="true">↗</span></a>
-          <a href="contact.html"><span class="menu-number">05</span><span>Contact</span><span class="menu-arrow" aria-hidden="true">↗</span></a>
+    <div class="curtain" aria-hidden="true"><span class="curtain-coin"></span><span class="curtain-mark">PK&amp;Co</span></div>
+    <div class="cursor is-hidden" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"><span class="cursor-label"></span></span></div>
+
+    <aside class="banner" aria-label="Website status">
+      <p><strong>Independent concept.</strong> <span class="banner-long">Not authorised or approved by the firm.</span><span class="banner-short">Not approved by the firm.</span></p>
+      <button class="notes-toggle" type="button" aria-pressed="false" data-notes-toggle hidden>
+        <span class="notes-toggle-track" aria-hidden="true"></span>
+        <span class="notes-toggle-label">Review notes</span>
+      </button>
+    </aside>
+
+    <header class="header" data-header>
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">PK</span>
+          <span class="brand-text"><span class="brand-name" translate="no">Pramod Krishna &amp; Co LLP</span><span class="brand-role">Chartered Accountants</span></span>
+        </a>
+        <nav class="nav" aria-label="Main">
+          <a href="about.html" aria-current="page"><span class="roll" data-text="About"><span>About</span></span></a>
+          <a href="services.html"><span class="roll" data-text="Services"><span>Services</span></span></a>
+          <a href="insights.html"><span class="roll" data-text="Insights"><span>Insights</span></span></a>
+          <a href="contact.html"><span class="roll" data-text="Contact"><span>Contact</span></span></a>
         </nav>
-      </details>
+        <div class="header-end">
+          <span class="status status-pill" data-status><span class="status-dot" aria-hidden="true"></span><span class="status-text">Mon–Sat, 9:30–7:00</span></span>
+          <a class="pill" href="tel:+919480151586" data-magnetic data-cursor="Call"><span class="roll" data-text="Call the office"><span>Call the office</span></span></a>
+        </div>
+        <details class="menu" data-menu>
+          <summary aria-label="Menu"><span class="menu-icon" aria-hidden="true"><span></span><span></span></span></summary>
+          <div class="menu-panel">
+            <nav aria-label="Main">
+              <a href="index.html"><span class="menu-index">01</span><span class="menu-word">Home</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="about.html" aria-current="page"><span class="menu-index">02</span><span class="menu-word">About</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="services.html"><span class="menu-index">03</span><span class="menu-word">Services</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="insights.html"><span class="menu-index">04</span><span class="menu-word">Insights</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <a href="contact.html"><span class="menu-index">05</span><span class="menu-word">Contact</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </nav>
+            <div class="menu-foot">
+              <p class="status" data-status><span class="status-dot" aria-hidden="true"></span><span class="status-text">Mon–Sat, 9:30–7:00</span></p>
+              <a class="menu-call" href="tel:+919480151586"><svg class="icon-phone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>94801&nbsp;51586</span></a>
+              <p>III Floor, Bridge Square, Balmatta, Mangaluru</p>
+            </div>
+          </div>
+        </details>
+      </div>
     </header>
 
+    <div class="tikku" data-tikku>
+      <div class="tikku-bubble" data-tikku-bubble aria-live="polite"></div>
+      <div class="tikku-panel" id="tikku-panel" role="dialog" aria-label="Quick help from Tikku" data-tikku-panel hidden>
+        <div class="tp-head">
+          <p class="tp-hello" data-tikku-hello>Hi, I&rsquo;m Tikku.</p>
+          <button class="tp-close" type="button" aria-label="Close quick help" data-tikku-close><span aria-hidden="true"></span></button>
+        </div>
+        <p class="status tp-status" data-status><span class="status-dot" aria-hidden="true"></span><span class="status-text">Mon–Sat, 9:30 am to 7:00 pm</span></p>
+        <ul class="tp-actions">
+          <li><a href="tel:+919480151586" data-cursor="Call"><svg class="icon-phone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>Call 94801&nbsp;51586</span></a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Pramod+Krishna+%26+Co+LLP%2C+Bridge+Square%2C+Balmatta%2C+Mangaluru" target="_blank" rel="noopener" data-cursor="Map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg><span>Get directions</span></a></li>
+          <li>
+            <button type="button" aria-expanded="false" aria-controls="tp-hours" data-accordion><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Office hours</span><span class="acc-chev" aria-hidden="true"></span></button>
+            <div class="acc-body" id="tp-hours" hidden>
+              <table class="hours hours-mini" data-hours>
+                <caption class="visually-hidden">Office hours</caption>
+                <tbody>
+                  <tr data-day="1"><th scope="row">Monday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="2"><th scope="row">Tuesday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="3"><th scope="row">Wednesday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="4"><th scope="row">Thursday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="5"><th scope="row">Friday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="6"><th scope="row">Saturday</th><td>9:30 am – 7:00 pm</td></tr>
+                  <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </li>
+          <li><a href="services.html#taxation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7M9 8h3"/></svg><span>What should I bring?</span></a></li>
+        </ul>
+        <button class="tp-hide" type="button" data-tikku-hide>Hide Tikku</button>
+      </div>
+      <button class="tikku-btn" type="button" aria-expanded="false" aria-controls="tikku-panel" aria-label="Tikku: quick help with hours, directions and calling the office" data-tikku-btn data-cursor="Hi!">
+        <span class="tikku-body" data-tikku-body>
+          <svg class="tk" viewBox="0 0 120 140" aria-hidden="true" focusable="false">
+            <defs>
+              <radialGradient id="tkBody" cx="36%" cy="30%" r="78%">
+                <stop offset="0" stop-color="#FFE7A8"/>
+                <stop offset=".5" stop-color="#F6BC45"/>
+                <stop offset="1" stop-color="#DB8E1C"/>
+              </radialGradient>
+            </defs>
+            <ellipse class="tk-shadow" cx="60" cy="133" rx="25" ry="4.5"/>
+            <g class="tk-all">
+              <g class="tk-feet"><ellipse cx="46" cy="124" rx="9.5" ry="5.5"/><ellipse cx="74" cy="124" rx="9.5" ry="5.5"/></g>
+              <g class="tk-arm tk-arm-l"><path d="M20 78c-9 3-13 10-13 18"/></g>
+              <g class="tk-arm tk-arm-r"><path d="M100 76c9-3 14-10 15-19"/></g>
+              <g class="tk-antenna"><path class="tk-stalk" d="M60 32V17"/><path class="tk-tick" d="M49 10l7 7 13-14"/></g>
+              <circle class="tk-body" cx="60" cy="76" r="44"/>
+              <circle class="tk-rim" cx="60" cy="76" r="36"/>
+              <g class="tk-face">
+                <g class="tk-eye tk-eye-l"><ellipse cx="45" cy="70" rx="9.5" ry="11"/><circle class="tk-pupil" cx="45" cy="71" r="4.6"/><circle class="tk-glint" cx="47" cy="68.5" r="1.5"/></g>
+                <g class="tk-eye tk-eye-r"><ellipse cx="75" cy="70" rx="9.5" ry="11"/><circle class="tk-pupil" cx="75" cy="71" r="4.6"/><circle class="tk-glint" cx="77" cy="68.5" r="1.5"/></g>
+                <ellipse class="tk-cheek" cx="34" cy="86" rx="5.5" ry="3.2"/>
+                <ellipse class="tk-cheek" cx="86" cy="86" rx="5.5" ry="3.2"/>
+                <path class="tk-mouth tk-smile" d="M51 88c5 7 13 7 18 0"/>
+                <ellipse class="tk-mouth tk-oh" cx="60" cy="91" rx="4.5" ry="5.5"/>
+                <path class="tk-mouth tk-sleep" d="M54 90h12"/>
+              </g>
+              <g class="tk-zzz"><text x="92" y="30">z</text><text x="100" y="18">z</text><text x="106" y="8">z</text></g>
+            </g>
+          </svg>
+        </span>
+      </button>
+      <button class="tikku-peek" type="button" aria-label="Show Tikku" data-tikku-show hidden><svg class="tick" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 13.4c2.1 1 3.7 2.9 5.1 5.4C10.4 13 14.8 8 21.2 4.2"/></svg></button>
+    </div>
+
     <main id="main">
-      <section class="page-hero page-width">
-        <p class="eyebrow"><span class="eyebrow-rule"></span> About the firm</p>
-        <h1>A clear view of the work.<br><em>A careful way through it.</em></h1>
-        <div class="page-hero-bottom"><p>A measured introduction to a professional practice in Mangaluru. Firm history, credentials and approved profile details are intentionally left for confirmation.</p><span class="page-hero-index">01 / PROFILE</span></div>
+      <section class="phero" data-phero aria-labelledby="page-title" data-tikku-say="Here&rsquo;s a bit about the people behind the numbers.">
+        <div class="aurora aurora-soft" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+        <div class="grid-glow" aria-hidden="true"></div>
+        <div class="wrap phero-inner">
+          <p class="eyebrow-pill" data-hero-fade><span class="pill-coin" aria-hidden="true">&#8377;</span>About the firm</p>
+          <h1 id="page-title" class="phero-title" data-split><span class="ln"><span><span translate="no">Pramod Krishna</span></span></span><span class="ln"><span><em translate="no">&amp; Co LLP</em></span></span></h1>
+          <div class="phero-foot">
+            <p class="phero-lede" data-hero-fade>Chartered accountants on the third floor of Bridge Square, Balmatta, since 2017. Audit, taxation and related advisory for individuals and businesses in and around Mangaluru.</p>
+            <p class="note" role="note"><b>To confirm</b><span>The founding year and this description come from public directory listings.</span></p>
+          </div>
+        </div>
       </section>
 
-      <section class="about-statement section-pad">
-        <div class="page-width about-statement-grid">
-          <p class="section-index">The role of the work</p>
+      <section class="principles" aria-labelledby="principles-title">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="label">How the work is done</p>
+            <h2 id="principles-title" class="display-2" data-split><span class="ln"><span>Careful routine,</span></span><span class="ln"><span><em>done every time.</em></span></span></h2>
+          </div>
+          <ol class="principle-grid">
+            <li class="pcard t-forest" data-reveal data-tilt><span class="pcard-num">01</span><h3>Start with the records</h3><p>Before saying what needs doing, look at what already exists: past returns, the books, notices and agreements.</p></li>
+            <li class="pcard t-saffron" data-reveal data-tilt><span class="pcard-num">02</span><h3>Reconcile as you go</h3><p>A small mismatch between the books, a bank statement and a GST return grows if it waits until year-end.</p></li>
+            <li class="pcard t-mint" data-reveal data-tilt><span class="pcard-num">03</span><h3>Say it plainly</h3><p>Tell people what is needed from them, what happens next and what the outcome means, in words they would use.</p></li>
+          </ol>
+          <p class="note" role="note"><b>To confirm</b><span>These principles are a draft. The firm should rewrite them in its own words.</span></p>
+        </div>
+      </section>
+
+      <section class="people" aria-labelledby="people-title" data-tikku-say="Faces coming soon. I&rsquo;m the only one who said yes so far.">
+        <div class="wrap people-grid">
           <div>
-            <h2>Financial information is useful when it is accurate, understood and put in context.</h2>
-            <p class="body-large">This concept presents the firm through the practical work of accounting and professional advice—not through unverified claims or invented history.</p>
+            <p class="label label-light">The people</p>
+            <h2 id="people-title" class="display-2" data-split><span class="ln"><span>Partners and team,</span></span><span class="ln"><span><em>introduced soon.</em></span></span></h2>
+            <p class="people-text" data-reveal>Names, qualifications and photographs will appear here once each person has approved their profile.</p>
+          </div>
+          <div class="people-cards" aria-hidden="true">
+            <div class="person" data-reveal data-tilt><div class="person-photo"><span>PK</span></div><span class="person-line"></span><span class="person-line short"></span></div>
+            <div class="person" data-reveal data-tilt><div class="person-photo"><span>PK</span></div><span class="person-line"></span><span class="person-line short"></span></div>
+            <div class="person" data-reveal data-tilt><div class="person-photo"><span>PK</span></div><span class="person-line"></span><span class="person-line short"></span></div>
           </div>
         </div>
+        <div class="wrap"><p class="note" role="note"><b>To confirm</b><span>Public reviews mention a &ldquo;CA Royson&rdquo;. Confirm names, roles and ICAI membership details with the firm before adding anyone.</span></p></div>
       </section>
 
-      <section class="principles-section section-pad">
-        <div class="page-width principles-grid">
-          <div class="principles-intro">
-            <p class="eyebrow"><span class="eyebrow-rule"></span> Proposed working principles</p>
-            <h2>Good work is precise.<br>Good communication is plain.</h2>
-            <p>These are draft descriptions of a professional approach, not verified service promises. The firm should edit and approve them before publication.</p>
-          </div>
-          <div class="principles-list">
-            <article><span>01</span><div><h3>Start with the situation</h3><p>Understand the requirements and the records available before describing the work to be done.</p></div></article>
-            <article><span>02</span><div><h3>Keep the detail in view</h3><p>Approach accounting, reporting and compliance tasks with care and professional judgment.</p></div></article>
-            <article><span>03</span><div><h3>Make the next step understandable</h3><p>Communicate what information is needed and what follows, in terms people can use.</p></div></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="partner-section section-pad">
-        <div class="page-width partner-grid">
+      <section class="facts-section" aria-labelledby="facts-title">
+        <div class="wrap facts-grid">
           <div>
-            <p class="eyebrow"><span class="eyebrow-rule"></span> People &amp; credentials</p>
-            <h2>Professional profiles<br>belong to the firm.</h2>
+            <p class="label">In brief</p>
+            <h2 id="facts-title" class="display-3">The practice, at a glance.</h2>
           </div>
-          <div class="partner-review">
-            <p class="partner-review-title">Profile details awaiting approval</p>
-            <p>Partner names, designations, professional credentials, biographies and photographs are not published in this concept. Add them only after the firm verifies spelling, roles and approved copy.</p>
-            <div class="profile-lines" aria-hidden="true"><span></span><span></span><span></span></div>
-            <a class="text-link" href="contact.html">Discuss the proposed site <span aria-hidden="true">↗</span></a>
-          </div>
+          <dl class="facts" data-reveal>
+            <div><dt>Name</dt><dd translate="no">Pramod Krishna &amp; Co LLP</dd></div>
+            <div><dt>Profession</dt><dd>Chartered Accountants</dd></div>
+            <div><dt>Constitution</dt><dd>Limited liability partnership</dd></div>
+            <div><dt>Established</dt><dd>2017</dd></div>
+            <div><dt>Office</dt><dd>III Floor, Bridge Square Building, near Juice Junction, Balmatta, Mangaluru</dd></div>
+            <div><dt>Hours</dt><dd>Monday to Saturday, 9:30 am to 7:00 pm</dd></div>
+            <div><dt>Firm registration no.</dt><dd class="pending">To be added</dd></div>
+          </dl>
         </div>
-      </section>
-
-      <section class="location-strip">
-        <div class="page-width location-strip-inner"><span class="location-mark" aria-hidden="true"></span><p><span>Location reference supplied for this concept</span>Bridge Square, Balmatta, Mangaluru, Karnataka, India <small>Confirm the office address before publication.</small></p></div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="page-width footer-main">
-        <div class="footer-brand">
-          <a class="wordmark wordmark-footer" href="index.html"><span class="wordmark-name">Pramod Krishna <span>&amp; Co LLP</span></span><span class="wordmark-description">Chartered Accountants</span></a>
-          <p>Bridge Square, Balmatta<br>Mangaluru, Karnataka, India <span class="provisional">(location for confirmation)</span></p>
+    <footer class="footer" data-footer data-tikku-say="That&rsquo;s the bottom. Want the number? Tap me.">
+      <div class="footer-inner wrap">
+        <div class="footer-top">
+          <p class="footer-call">Questions about a return, a notice or your books?<a href="tel:+919480151586" data-cursor="Call">94801&nbsp;51586</a></p>
+          <a class="to-top" href="#main" data-to-top data-magnetic aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
         </div>
-        <nav class="footer-nav" aria-label="Footer navigation"><a href="about.html">About</a><a href="services.html">Services</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a></nav>
-        <div class="footer-note"><p>This is an independent website concept and is not an official or approved firm website.</p><p>Any published information would be general in nature and not individualized professional advice, subject to the firm’s review.</p></div>
+        <div class="footer-grid">
+          <div>
+            <h2 class="footer-head">Office</h2>
+            <p>III Floor, Bridge Square Building<br>Near Juice Junction, Balmatta<br>Mangaluru, Karnataka 575002</p>
+          </div>
+          <div>
+            <h2 class="footer-head">Hours</h2>
+            <p>Monday to Saturday<br>9:30 am to 7:00 pm<br>Closed on Sunday</p>
+          </div>
+          <div>
+            <h2 class="footer-head">Contact</h2>
+            <p><a href="tel:+919480151586">94801&nbsp;51586</a><br><a href="mailto:capramod123@gmail.com">capramod123@gmail.com</a><br><a href="https://www.google.com/maps/search/?api=1&amp;query=Pramod+Krishna+%26+Co+LLP%2C+Bridge+Square%2C+Balmatta%2C+Mangaluru" target="_blank" rel="noopener">Directions on Google Maps</a></p>
+          </div>
+          <nav aria-label="Footer">
+            <h2 class="footer-head">Pages</h2>
+            <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="insights.html">Insights</a><a href="contact.html">Contact</a>
+          </nav>
+        </div>
+        <p class="footer-name" translate="no" aria-hidden="true" data-footer-name>Pramod Krishna &amp; Co</p>
+        <div class="footer-base">
+          <span>&copy; <span data-year-now>2026</span> <span translate="no">Pramod Krishna &amp; Co LLP</span>, Chartered Accountants</span>
+          <span>Independent concept for the firm&rsquo;s review. Not the firm&rsquo;s official website, and not advice on any individual matter.</span>
+        </div>
       </div>
-      <div class="page-width footer-bottom"><span>© <span class="year">2026</span> Pramod Krishna &amp; Co LLP</span><span>Content and professional review required before launch</span></div>
     </footer>
   </body>
 </html>

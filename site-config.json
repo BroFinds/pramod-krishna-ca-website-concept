@@ -2,29 +2,58 @@
   "status": "concept",
   "authorizedByFirm": false,
   "indexingAllowed": false,
+  "researchedOn": "2026-11-07",
+  "sources": {
+    "threebestrated": "https://threebestrated.in/pramod-krishna-co-llp-chartered-accountants-mangalore-ka-FpEnd",
+    "justdial": "https://www.justdial.com/Mangalore/Pramod-Krishna-Co-Near-Juice-Junction-Balmatta-Balmatta/0824PX824-X824-171225193002-G3Z6_BZDET",
+    "facebook": "https://www.facebook.com/CAKrishnaPramod/"
+  },
   "firm": {
     "name": "Pramod Krishna & Co LLP",
     "descriptor": "Chartered Accountants",
+    "established": {
+      "value": "2017",
+      "status": "public-directory-unverified",
+      "source": "threebestrated"
+    },
     "address": {
-      "value": "Bridge Square, Balmatta, Mangaluru, Karnataka, India",
-      "status": "provided-for-review"
+      "value": "III Floor, Bridge Square Building, Near Juice Junction, Balmatta, Mangaluru, Karnataka 575002",
+      "status": "public-directory-unverified",
+      "note": "Justdial gives PIN 575002; ThreeBestRated gives 575003.",
+      "source": "threebestrated, justdial"
     },
     "phone": {
-      "value": "",
-      "status": "not-confirmed"
+      "value": "+91 94801 51586",
+      "status": "public-directory-unverified",
+      "source": "threebestrated"
     },
     "email": {
-      "value": "",
-      "status": "not-confirmed"
+      "value": "capramod123@gmail.com",
+      "status": "public-directory-unverified",
+      "note": "Personal Gmail address; the firm may prefer to publish a different one.",
+      "source": "threebestrated"
     },
     "officeHours": {
-      "value": "",
-      "status": "not-confirmed"
+      "value": {
+        "monday-saturday": "09:30-19:00",
+        "sunday": "closed"
+      },
+      "timeZone": "Asia/Kolkata",
+      "status": "public-directory-unverified",
+      "source": "threebestrated"
     },
     "partners": {
       "status": "names-and-roles-require-confirmation",
+      "note": "Public review summaries mention a 'CA Royson'; role unknown. No partner names are published.",
       "profiles": []
     }
+  },
+  "publicRatings": {
+    "status": "not-published-on-site",
+    "reason": "ICAI guidance restricts testimonials and promotional claims on members' websites; confirm with an authorised reviewer before showing any ratings or reviews.",
+    "justdial": { "rating": 4.9, "count": 249, "seenOn": "2026-11-07" },
+    "threebestrated": { "score": 4.6, "note": "Platform's own inspection score, not a customer average." },
+    "google": { "status": "not-retrieved", "note": "Google Maps blocks automated access; check the listing manually." }
   },
   "services": {
     "status": "proposed-unconfirmed",
