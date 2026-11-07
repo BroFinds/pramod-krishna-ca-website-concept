@@ -562,13 +562,14 @@
     gsap.from(inner, { y: 80, rotation: i % 2 ? 2 : -2, autoAlpha: 0, duration: 1, scrollTrigger: { trigger: card, start: "top 92%" } });
     const nextCard = cards[i + 1];
     if (!nextCard) return;
+    // Each card stays fully readable while it is on top (CSS gives it a pause);
+    // it only settles back, without fading, as the next card slides over it.
     gsap.to(inner, {
-      scale: 0.9,
-      rotationX: 8,
+      scale: 0.93,
+      rotationX: 6,
       transformPerspective: 1000,
-      autoAlpha: 0.55,
       ease: "none",
-      scrollTrigger: { trigger: nextCard, start: "top bottom", end: () => `top ${(header?.offsetHeight || 70) + 40}px`, scrub: true },
+      scrollTrigger: { trigger: nextCard, start: "top 70%", end: () => `top ${(header?.offsetHeight || 70) + 40}px`, scrub: true },
     });
   });
 

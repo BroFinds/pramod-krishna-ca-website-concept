@@ -4069,3 +4069,22 @@ html {
 .phero-inner .eyebrow-pill {
   align-self: flex-start;
 }
+
+/* Stacking cards: a reading pause on top before the next card arrives */
+.stack {
+  gap: 0;
+}
+
+.stack-card {
+  margin-bottom: 55vh;
+}
+
+.stack-card:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .stack-card {
+    margin-bottom: 45vh;
+  }
+}
